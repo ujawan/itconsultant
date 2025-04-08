@@ -346,7 +346,7 @@ public function ourServices(): string|RedirectResponse
     $this->homeModel = new homeModel(); // Instantiate the model
 
     $data['services'] = $this->homeModel->getServicesData();
-    return view('admin/services', $data);
+    return view('admin/ourservices', $data);
 }
 
 
