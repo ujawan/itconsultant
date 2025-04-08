@@ -95,7 +95,7 @@ $uri = service('uri');
                         <li class="nav-item">
                             <a class="nav-link <?= ($uri->getSegment(2) === 'services' ? 'active' : '') ?>" 
                                href="<?= site_url('admin/services') ?>">
-                                <i class="fas fa-cogs"></i> Services
+                                <i class="fas fa-cogs"></i>Our Services
                             </a>
                         </li>
                         <li class="nav-item">

@@ -337,6 +337,22 @@ public function updateWhyChooseUs($id)
     $db->table('features')->where('feature_id', $id)->update($data);
     return redirect()->to('/admin');
 }
+
+public function ourServices(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel(); // Instantiate the model
+
+    $data['services'] = $this->homeModel->getServicesData();
+    return view('admin/services', $data);
+}
+
+
+
+
+
 }
    
 

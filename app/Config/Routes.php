@@ -56,6 +56,9 @@ $routes->get('admin/about', 'Admin::about');
 $routes->post('/admin/aboutedit/(:num)', 'Admin::updateAbout/$1');
 $routes->get('admin/whychooseus', 'Admin::whychooseus');
 $routes->post('/admin/whychooseusedit/(:num)', 'Admin::updateWhyChooseUs/$1');
+$routes->get('admin/services', 'Admin::ourServices');
+
+
 
 
 
