@@ -77,6 +77,21 @@ $uri = service('uri');
                                 <i class="fas fa-home"></i> Home
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'about' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/about') ?>">
+                                <i class="fas fa-info-circle"></i> About Us
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'whychooseus' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/whychooseus') ?>">
+                                <i class="fas fa-blog"></i> Why Choose Us
+                            </a>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link <?= ($uri->getSegment(2) === 'services' ? 'active' : '') ?>" 
                                href="<?= site_url('admin/services') ?>">

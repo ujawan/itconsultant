@@ -15,31 +15,27 @@
     // Initiate the wowjs
     new WOW().init();
 
-    // Testimonial carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        margin: 25,
-        dots: false,
-        loop: true,
-        nav: true,
-        navText: [
-            '<i class="bi bi-chevron-left"></i>',
-            '<i class="bi bi-chevron-right"></i>'
-        ],
-        responsive: {
-            0: {
-                items: 1
-            },
-            768: {
-                items: 2
-            }
-        }
-    });
+       // Set active nav item based on current URL
+       $(document).ready(function() {
+        // Get current path and find target link
+        var path = window.location.pathname;
+        var target = path.split('/').pop() || 'index';
 
-    // Initialize Bootstrap Carousel
-    $('.carousel').carousel({
-        interval: 5000
+        // Remove active class from all nav items
+        $('.navbar-nav .nav-link').removeClass('active');
+
+        // Add active class to current nav item
+        $('.navbar-nav .nav-link').each(function() {
+            var href = $(this).attr('href');
+            if (href) {
+                var page = href.split('/').pop() || 'index';
+                if (page === target || 
+                    (target === 'index' && href === window.location.origin + '/') || 
+                    (target === '' && href === window.location.origin + '/')) {
+                    $(this).addClass('active');
+                }
+            }
+        });
     });
 
 
@@ -101,6 +97,30 @@
     });
 
 
+    // Testimonials carousel
+    $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        dots: true,
+        loop: true,
+        center: true,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    });
+
+
     // Vendor carousel
     $('.vendor-carousel').owlCarousel({
         loop: true,
@@ -126,3 +146,4 @@
     });
     
 })(jQuery);
+

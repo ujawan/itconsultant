@@ -24,10 +24,8 @@
 
     <!-- Libraries Stylesheet -->
     <link href="<?= base_url('assets/lib/owlcarousel/assets/owl.carousel.min.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/lib/owlcarousel/assets/owl.theme.default.min.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') ?>" rel="stylesheet" />
-    <link href="<?= base_url('assets/lib/lightbox/css/lightbox.min.css') ?>" rel="stylesheet">
-
+    <link href="<?= base_url('assets/lib/animate/animate.min.css') ?>" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" rel="stylesheet">
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?= base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
 
@@ -55,11 +53,8 @@
     <script src="<?= base_url('assets/lib/waypoints/waypoints.min.js') ?>"></script>
     <script src="<?= base_url('assets/lib/counterup/counterup.min.js') ?>"></script>
     <script src="<?= base_url('assets/lib/owlcarousel/owl.carousel.min.js') ?>"></script>
-    <script src="<?= base_url('assets/lib/tempusdominus/js/moment.min.js') ?>"></script>
-    <script src="<?= base_url('assets/lib/tempusdominus/js/moment-timezone.min.js') ?>"></script>
-    <script src="<?= base_url('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') ?>"></script>
-    <script src="<?= base_url('assets/lib/isotope/isotope.pkgd.min.js') ?>"></script>
-    <script src="<?= base_url('assets/lib/lightbox/js/lightbox.min.js') ?>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="<?= base_url('assets/js/main.js') ?>"></script>

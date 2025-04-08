@@ -1,5 +1,21 @@
+# Disable directory browsing
+Options -Indexes
+
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteRule ^$ public/ [L]
-    RewriteRule (.*) public/$1 [L]
+    
+    # If the request is for an existing file in /public, serve it directly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{DOCUMENT_ROOT}/itconsultant/public/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/itconsultant/public/$1 -d
+    RewriteRule ^(.*)$ public/$1 [L]
+
+    # Handle the root URL
+    RewriteRule ^$ public/index.php/ [L]
+
+    # For all other requests, route through index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ public/index.php/$1 [L,QSA]
 </IfModule>

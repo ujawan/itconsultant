@@ -36,4 +36,33 @@ class homeModel extends Model
     {
         return $this->db->table('quote')->get()->getResultArray();
     }
+    public function getTestimonialData()
+    {
+        return $this->db->table('testimonial')->get()->getResultArray();
+    }
+    public function getTeamData()
+    {
+        return $this->db->table('team')->get()->getResultArray();
+    }
+    public function getBrandLogo()
+    {
+        return $this->db->table('brand_logo')->get()->getResultArray();
+    }
+
+    public function updateHome($id, $data)
+    {
+        return $this->db->table('home')->where('home_id', $id)->update($data);
+    }
+    public function updateAbout($id, $data)
+    {
+        return $this->db->table('about')->where('about_id', $id)->update($data);
+    }
+    public function updateFeature($id, $data)
+    {
+        return $this->db->table('features')->where('feature_id', $id)->update($data);
+    }
+
+
+    
+    
 }

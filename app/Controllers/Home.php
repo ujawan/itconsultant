@@ -20,6 +20,9 @@ class Home extends BaseController
         $data['services'] = $this->homeModel->getServicesData();
         $data['pricings'] = $this->homeModel->getPricingData();
         $data['quotes'] = $this->homeModel->getQuoteData();
+        $data['testimonials'] = $this->homeModel->getTestimonialData();
+        $data['teams'] = $this->homeModel->getTeamData();
+        $data['brand_logos'] = $this->homeModel->getBrandLogo();
         return view('pages/index', $data);
     }
 
