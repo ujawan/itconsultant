@@ -43,7 +43,6 @@ $routes->group('admin', static function($routes) {
 });
 $routes->get('about', 'Home::about');
 $routes->get('service', 'Home::service');
-$routes->get('blog', 'Home::blog');
 $routes->get('contact', 'Home::contact');
 $routes->get('quote', 'Home::quote');
 $routes->get('team', 'Home::team');
