@@ -160,4 +160,12 @@ class Admin extends BaseController
         }
         return view('admin/settings');
     }
+
+    public function home(): string|RedirectResponse
+    {
+        if (!$this->checkLogin()) {
+            return redirect()->to('admin/login');
+        }
+        return view('admin/home');
+    }
 }

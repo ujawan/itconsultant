@@ -50,3 +50,6 @@ $routes->get('team', 'Home::team');
 $routes->get('testimonial', 'Home::testimonial');
 $routes->get('feature', 'Home::feature');
 $routes->get('detail/(:any)', 'Home::detail/$1');
+$routes->get('admin/home', 'Admin::home');
+
+
