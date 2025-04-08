@@ -19,11 +19,6 @@ class Home extends BaseController
         return view('pages/service');
     }
 
-    public function blog(): string
-    {
-        return view('pages/blog');
-    }
-
     public function contact(): string
     {
         return view('pages/contact');
@@ -34,23 +29,4 @@ class Home extends BaseController
         return view('pages/quote');
     }
 
-    public function team(): string
-    {
-        return view('pages/team');
-    }
-
-    public function testimonial(): string
-    {
-        return view('pages/testimonial');
-    }
-
-    public function feature(): string
-    {
-        return view('pages/feature');
-    }
-
-    public function detail($id = null): string
-    {
-        return view('pages/detail', ['id' => $id]);
-    }
 }

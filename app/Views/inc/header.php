@@ -42,7 +42,6 @@
                     <a href="<?= base_url() ?>" class="nav-item nav-link active">Home</a>
                     <a href="<?= base_url('about') ?>" class="nav-item nav-link">About</a>
                     <a href="<?= base_url('service') ?>" class="nav-item nav-link">Services</a>
-                    <a href="<?= base_url('blog') ?>" class="nav-item nav-link">Blog</a>
                     <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
                 </div>
                 <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
