@@ -16,6 +16,8 @@ class Admin extends BaseController
     public function __construct()
     {
         helper(['form', 'url']);
+        $this->homeModel = new homeModel();
+        
     }
 
     private function checkLogin(): bool
@@ -318,35 +320,53 @@ public function ourServices(): string|RedirectResponse
     return view('admin/ourservices', $data);
 }
 
-public function updateOurServices($id)
-
-
-{
-    
-    $this->homeModel = new homeModel();
-    $db = \Config\Database::connect();
-
-    // Get existing record
-    $record = $db->table('services')->where('service_id', $id)->get()->getRowArray();
-
-    $data = [
-        'service_name' => $this->request->getPost('serviceName'),
-        'service_text' => $this->request->getPost('serviceDetail')
-    ];
-    $this->homeModel->updateServices($id, $data);
-    return redirect()->to('/admin');
-}
-
-public function quote(): string|RedirectResponse
+public function services()
 {
     if (!$this->checkLogin()) {
         return redirect()->to('admin/login');
     }
-    $this->homeModel = new homeModel(); // Instantiate the model
+    $data['services'] = $this->homeModel->getServicesData();
+    return view('admin/ourservices', $data);
+}
 
+public function addService()
+{
+    $data = [
+        'service_name' => $this->request->getPost('serviceName'),
+        'service_text' => $this->request->getPost('serviceDetail')
+    ];
+    
+    $this->homeModel->addService($data);
+    return redirect()->to('admin/ourservices');
+}
+
+public function updateService($id)
+{
+    $data = [
+        'service_name' => $this->request->getPost('serviceName'),
+        'service_text' => $this->request->getPost('serviceDetail')
+    ];
+    
+    $this->homeModel->updateService($id, $data);
+    return redirect()->to('admin/ourservices');
+}
+
+public function deleteService($id)
+{
+    $this->homeModel->deleteService($id);
+    return redirect()->to('admin/ourservices');
+}
+public function quote()
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
     $data['quotes'] = $this->homeModel->getQuoteData();
     return view('admin/quote', $data);
 }
+
+
+
 
 public function updateQuote($id)
 {
@@ -377,10 +397,8 @@ public function pricing(): string|RedirectResponse
     return view('admin/pricing', $data);
 }
 
-public function updatePricing($id)
+public function addPricing()
 {
-    $this->homeModel = new homeModel();
-
     $data = [
         'pricing_plan' => $this->request->getPost('pricing_plan'),
         'pricing_text' => $this->request->getPost('pricing_text'),
@@ -390,8 +408,31 @@ public function updatePricing($id)
         'pricing_check3' => $this->request->getPost('pricing_check3'),
         'pricing_check4' => $this->request->getPost('pricing_check4')
     ];
+    
+    $this->homeModel->addPricing($data);
+    return redirect()->to('admin/pricing');
+}
+
+public function updatePricing($id)
+{
+    $data = [
+        'pricing_plan' => $this->request->getPost('pricing_plan'),
+        'pricing_text' => $this->request->getPost('pricing_text'),
+        'price' => $this->request->getPost('price'),
+        'pricing_check1' => $this->request->getPost('pricing_check1'),
+        'pricing_check2' => $this->request->getPost('pricing_check2'),
+        'pricing_check3' => $this->request->getPost('pricing_check3'),
+        'pricing_check4' => $this->request->getPost('pricing_check4')
+    ];
+    
     $this->homeModel->updatePricing($id, $data);
-    return redirect()->to('/admin');
+    return redirect()->to('admin/pricing');
+}
+
+public function deletePricing($id)
+{
+    $this->homeModel->deletePricing($id);
+    return redirect()->to('admin/pricing');
 }
 
 public function Testimonials(): string|RedirectResponse
@@ -405,7 +446,53 @@ public function Testimonials(): string|RedirectResponse
     return view('admin/testimonials', $data);
 }
 
-public function updateTestimonials($id)
+
+public function addTestimonial()
+{
+    $img = $this->request->getFile('testimonial_img');
+    $newName = $img->getRandomName();
+    $img->move('assets/img', $newName);
+
+    $data = [
+        'client_name' => $this->request->getPost('client_name'),
+        'client_position' => $this->request->getPost('client_position'),
+        'detail' => $this->request->getPost('detail'),
+        'testimonial_img' => $newName
+    ];
+    
+    $this->homeModel->addTestimonial($data);
+    return redirect()->to('admin/testimonials');
+}
+
+public function updateTestimonial($id)
+{
+    $data = [
+        'client_name' => $this->request->getPost('client_name'),
+        'client_position' => $this->request->getPost('client_position'),
+        'detail' => $this->request->getPost('detail')
+
+    ];
+
+    if ($img = $this->request->getFile('testimonial_img')) {
+        if ($img->isValid() && !$img->hasMoved()) {
+            $newName = $img->getRandomName();
+            $img->move('assets/img', $newName);
+            $data['testimonial_img'] = $newName;
+        }
+    }
+    
+    $this->homeModel->updateTestimonial($id, $data);
+    return redirect()->to('admin/testimonials');
+}
+
+public function deleteTestimonial($id)
+{
+    $this->homeModel->deleteTestimonial($id);
+    return redirect()->to('admin/testimonials');
+}
+
+
+/*public function updateTestimonials($id)
 {
     $this->homeModel = new homeModel();
     $db = \Config\Database::connect();
@@ -439,6 +526,7 @@ public function updateTestimonials($id)
     $this->homeModel->updateTestimonials($id, $data);
     return redirect()->to('/admin/testimonials');
 }
+*/
 public function Team(): string|RedirectResponse
 {
     if (!$this->checkLogin()) {
@@ -449,8 +537,71 @@ public function Team(): string|RedirectResponse
     $data['teams'] = $this->homeModel->getTeamData();
     return view('admin/team', $data);
 }
+public function addTeam()
+{
+    $img = $this->request->getFile('team_img');
+    $newName = $img->getRandomName();
+    $img->move('assets/img', $newName);
+
+    $data = [
+        'name' => $this->request->getPost('team_name'),
+        'designation' => $this->request->getPost('team_position'),
+        'team_img' => $newName,
+        'team_twitter' => $this->request->getPost('team_twitter'),
+        'team_facebook' => $this->request->getPost('team_facebook'),
+        'team_insta' => $this->request->getPost('team_insta'),
+        'team_linkedin' => $this->request->getPost('team_linkedin')
+    ];
+    
+    $this->homeModel->addTeam($data);
+    return redirect()->to('admin/team');
+}
 
 public function updateTeam($id)
+{
+    $team = $this->homeModel->getTeam($id);
+    
+    $data = [
+        'name' => $this->request->getPost('team_name'),
+        'designation' => $this->request->getPost('team_position'),
+        'team_twitter' => $this->request->getPost('team_twitter'),
+        'team_facebook' => $this->request->getPost('team_facebook'),
+        'team_insta' => $this->request->getPost('team_insta'),
+        'team_linkedin' => $this->request->getPost('team_linkedin')
+    ];
+
+    if ($img = $this->request->getFile('team_img')) {
+        if ($img->isValid() && !$img->hasMoved()) {
+            // Delete old image
+            if ($team['team_img'] && file_exists('assets/img/' . $team['team_img'])) {
+                unlink('assets/img/' . $team['team_img']);
+            }
+            
+            // Upload new image
+            $newName = $img->getRandomName();
+            $img->move('assets/img', $newName);
+            $data['team_img'] = $newName;
+        }
+    }
+    
+    $this->homeModel->updateTeam($id, $data);
+    return redirect()->to('admin/team');
+}
+
+public function deleteTeam($id)
+{
+    $team = $this->homeModel->getTeam($id);
+    
+    // Delete image file
+    if ($team['team_img'] && file_exists('assets/img/' . $team['team_img'])) {
+        unlink('assets/img/' . $team['team_img']);
+    }
+    
+    $this->homeModel->deleteTeam($id);
+    return redirect()->to('admin/team');
+}
+
+/*public function updateTeam($id)
 {
     $this->homeModel = new homeModel();
     $db = \Config\Database::connect();
@@ -485,6 +636,7 @@ public function updateTeam($id)
     $this->homeModel->updateTeam($id, $data);
     return redirect()->to('/admin/team');
 }
+*/
 
 public function brand(): string|RedirectResponse
 {
@@ -497,7 +649,57 @@ public function brand(): string|RedirectResponse
     return view('admin/brand', $data);
 }
 
+public function addBrand()
+{
+    $img = $this->request->getFile('brand_logo');
+    if ($img->isValid() && !$img->hasMoved()) {
+        $newName = $img->getRandomName();
+        $img->move('assets/img', $newName);
+        
+        $data = ['brand_logo' => $newName];
+        $this->homeModel->addBrand($data);
+    }
+    
+    return redirect()->to('admin/brand');
+}
+
 public function updateBrand($id)
+{
+    $brand = $this->homeModel->getBrand($id);
+    
+    if ($img = $this->request->getFile('brand_logo')) {
+        if ($img->isValid() && !$img->hasMoved()) {
+            // Delete old image
+            if ($brand['brand_logo'] && file_exists('assets/img/' . $brand['brand_logo'])) {
+                unlink('assets/img/' . $brand['brand_logo']);
+            }
+            
+            // Upload new image
+            $newName = $img->getRandomName();
+            $img->move('assets/img', $newName);
+            
+            $data = ['brand_logo' => $newName];
+            $this->homeModel->updateBrand($id, $data);
+        }
+    }
+    
+    return redirect()->to('admin/brand');
+}
+
+public function deleteBrand($id)
+{
+    $brand = $this->homeModel->getBrand($id);
+    
+    // Delete image file
+    if ($brand['brand_logo'] && file_exists('assets/img/' . $brand['brand_logo'])) {
+        unlink('assets/img/' . $brand['brand_logo']);
+    }
+    
+    $this->homeModel->deleteBrand($id);
+    return redirect()->to('admin/brand');
+}
+
+/*public function updateBrand($id)
 {
     $this->homeModel = new homeModel();
     
@@ -515,6 +717,47 @@ public function updateBrand($id)
     }
     
     return redirect()->to('/admin');  // Changed to redirect back to brand page
+}
+*/
+
+public function menu(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel(); // Instantiate the model
+
+    $data['menus'] = $this->homeModel->getMenuData();
+    return view('admin/menu', $data);
+}
+public function addMenu()
+{
+    $data = [
+        'menu_name' => $this->request->getPost('menu_name'),
+        'url' => str_replace(' ', '-', strtolower($this->request->getPost('url'))), // Convert spaces to hyphens
+        'order_num' => $this->request->getPost('order_num')
+    ];
+    
+    $this->homeModel->addMenu($data);
+    return redirect()->to('admin/menu');
+}
+
+public function updateMenu($id)
+{
+    $data = [
+        'menu_name' => $this->request->getPost('menu_name'),
+        'url' => str_replace(' ', '-', strtolower($this->request->getPost('url'))), // Convert spaces to hyphens
+        'order_num' => $this->request->getPost('order_num')
+    ];
+    
+    $this->homeModel->updateMenu($id, $data);
+    return redirect()->to('admin/menu');
+}
+
+public function deleteMenu($id)
+{
+    $this->homeModel->deleteMenu($id);
+    return redirect()->to('admin/menu');
 }
 
 }
