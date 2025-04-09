@@ -87,14 +87,7 @@ class Admin extends BaseController
     }
 
     // Services Management
-    public function services(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        
-        return view('admin/services/index');
-    }
+    
 
     public function newService(): string|RedirectResponse
     {
@@ -121,31 +114,7 @@ class Admin extends BaseController
         return view('admin/blog/new');
     }
 
-    // Team Management
-    public function team(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/team/index');
-    }
-
-    public function newTeamMember(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/team/new');
-    }
-
-    // Testimonials Management
-    public function testimonials(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/testimonials/index');
-    }
+  
 
     public function newTestimonial(): string|RedirectResponse
     {
@@ -321,7 +290,7 @@ public function updateWhyChooseUs($id)
 
     // Get all form data
     $data = [
-        'feature_heading' => $this->request->getPost('heroHeading') ?? $record['feature_heading'],
+        'feature_heading' => $this->request->getPost('featureHeading') ?? $record['feature_heading'],
         'feature_name' => $this->request->getPost('featureName') ?? $record['feature_name'],
         'feature_detail' => $this->request->getPost('featureDetail') ?? $record['feature_detail'],
         'feature_name2' => $this->request->getPost('featureName2') ?? $record['feature_name2'],
@@ -349,10 +318,204 @@ public function ourServices(): string|RedirectResponse
     return view('admin/ourservices', $data);
 }
 
+public function updateOurServices($id)
 
 
+{
+    
+    $this->homeModel = new homeModel();
+    $db = \Config\Database::connect();
 
+    // Get existing record
+    $record = $db->table('services')->where('service_id', $id)->get()->getRowArray();
+
+    $data = [
+        'service_name' => $this->request->getPost('serviceName'),
+        'service_text' => $this->request->getPost('serviceDetail')
+    ];
+    $this->homeModel->updateServices($id, $data);
+    return redirect()->to('/admin');
+}
+
+public function quote(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel(); // Instantiate the model
+
+    $data['quotes'] = $this->homeModel->getQuoteData();
+    return view('admin/quote', $data);
+}
+
+public function updateQuote($id)
+{
+    $this->homeModel = new homeModel();
+
+    $data = [
+        'quote_heading' => $this->request->getPost('quote_heading'),
+        'quote_check1' => $this->request->getPost('quote_check1'),
+        'quote_check2' => $this->request->getPost('quote_check2'),
+        'quote_text' => $this->request->getPost('quote_text'),
+        'quote_phone_heading' => $this->request->getPost('quote_phone_heading'),
+        'quote_phone' => $this->request->getPost('quote_phone')
+    ];
+
+    $this->homeModel->updateQuote($id, $data);
+    return redirect()->to('/admin');
+}
+
+public function pricing(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    
+    $this->homeModel = new homeModel(); // Instantiate the model
+    
+    $data['prices'] = $this->homeModel->getPricingData();
+    return view('admin/pricing', $data);
+}
+
+public function updatePricing($id)
+{
+    $this->homeModel = new homeModel();
+
+    $data = [
+        'pricing_plan' => $this->request->getPost('pricing_plan'),
+        'pricing_text' => $this->request->getPost('pricing_text'),
+        'price' => $this->request->getPost('price'),
+        'pricing_check1' => $this->request->getPost('pricing_check1'),
+        'pricing_check2' => $this->request->getPost('pricing_check2'),
+        'pricing_check3' => $this->request->getPost('pricing_check3'),
+        'pricing_check4' => $this->request->getPost('pricing_check4')
+    ];
+    $this->homeModel->updatePricing($id, $data);
+    return redirect()->to('/admin');
+}
+
+public function Testimonials(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel();
+
+    $data['testimonials'] = $this->homeModel->getTestimonialsData();
+    return view('admin/testimonials', $data);
+}
+
+public function updateTestimonials($id)
+{
+    $this->homeModel = new homeModel();
+    $db = \Config\Database::connect();
+
+    // Get existing record
+    $record = $db->table('testimonial')->where('testimonial_id', $id)->get()->getRowArray();
+    
+    // Handle image upload
+    $file = $this->request->getFile('testimonial_img');
+    
+    // Initialize image name with existing image
+    $imageName = $record['testimonial_img'];
+    
+    // Only process if new image is uploaded
+    if ($file && $file->isValid() && !$file->hasMoved()) {
+        // Delete old image if exists
+        if ($imageName && file_exists('assets/img/' . $imageName)) {
+            unlink('assets/img/' . $imageName);
+        }
+        $imageName = $file->getRandomName();
+        $file->move('assets/img', $imageName);
+    }
+    
+    $data = [
+        'client_name' => $this->request->getPost('client_name'),
+        'client_position' => $this->request->getPost('client_position'),
+        'detail' => $this->request->getPost('detail'),
+        'testimonial_img' => $imageName
+    ];
+
+    $this->homeModel->updateTestimonials($id, $data);
+    return redirect()->to('/admin/testimonials');
+}
+public function Team(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel(); // Instantiate the model
+
+    $data['teams'] = $this->homeModel->getTeamData();
+    return view('admin/team', $data);
+}
+
+public function updateTeam($id)
+{
+    $this->homeModel = new homeModel();
+    $db = \Config\Database::connect();
+
+    // Get existing record
+    $record = $db->table('team')->where('team_id', $id)->get()->getRowArray();
+    
+    // Initialize image name with existing image
+    $imageName = $record['team_img'];
+    
+    // Handle image upload
+    $file = $this->request->getFile('team_img');
+    if ($file && $file->isValid() && !$file->hasMoved()) {
+        // Delete old image if exists
+        if ($imageName && file_exists('assets/img/' . $imageName)) {
+            unlink('assets/img/' . $imageName);
+        }
+        $imageName = $file->getRandomName();
+        $file->move('assets/img', $imageName);
+    }
+    
+    $data = [
+        'name' => $this->request->getPost('team_name'),
+        'designation' => $this->request->getPost('team_position'),
+        'team_img' => $imageName,
+        'team_twitter' => $this->request->getPost('team_twitter'),
+        'team_facebook' => $this->request->getPost('team_facebook'),
+        'team_insta' => $this->request->getPost('team_insta'),
+        'team_linkedin' => $this->request->getPost('team_linkedin')
+    ];
+
+    $this->homeModel->updateTeam($id, $data);
+    return redirect()->to('/admin/team');
+}
+
+public function brand(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel(); // Instantiate the model
+
+    $data['brands'] = $this->homeModel->getBrandLogo();
+    return view('admin/brand', $data);
+}
+
+public function updateBrand($id)
+{
+    $this->homeModel = new homeModel();
+    
+    // Handle image upload
+    $img = $this->request->getFile('brand_logo'); // Changed from brand_img to brand_logo
+    if ($img && $img->isValid() && !$img->hasMoved()) {
+        $newName = $img->getRandomName();
+        $img->move('assets/img', $newName);
+        
+        $data = [
+            'brand_logo' => $newName  // Changed from brand_img to brand_logo
+        ];
+        
+        $this->homeModel->updateBrand($id, $data);
+    }
+    
+    return redirect()->to('/admin');  // Changed to redirect back to brand page
+}
 
 }
    
-

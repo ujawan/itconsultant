@@ -36,7 +36,7 @@ class homeModel extends Model
     {
         return $this->db->table('quote')->get()->getResultArray();
     }
-    public function getTestimonialData()
+    public function getTestimonialsData()
     {
         return $this->db->table('testimonial')->get()->getResultArray();
     }
@@ -61,8 +61,37 @@ class homeModel extends Model
     {
         return $this->db->table('features')->where('feature_id', $id)->update($data);
     }
+    public function updateServices($id, $data)
+    {
+        return $this->db->table('services')->where('service_id', $id)->update($data);
+    }
+    public function updateQuote($id, $data)
+    {
+        return $this->db->table('quote')->where('quote_id', $id)->update($data);
+    }
+    public function updatePricing($id, $data)
+    {
+        return $this->db->table('pricing')->where('pricing_id', $id)->update($data);
+    }
+    public function updateTestimonials($id, $data)
+    {
+        return $this->db->table('testimonial')->where('testimonial_id', $id)->update($data);
+    }
+    public function updateTeam($id, $data)
+    {
+        return $this->db->table('team')->where('team_id', $id)->update($data);
+    }
+    public function updateBrand($id, $data)
+    {
+        return $this->db->table('brand_logo')->where('brand_id', $id)->update($data);
+    }
 
+    public function getMenuData()
+    {
+        return $this->db->table('menu')
+                        ->orderBy('order_num', 'ASC')
+                        ->get()
+                        ->getResultArray();
+    }
 
-    
-    
 }

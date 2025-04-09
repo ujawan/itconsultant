@@ -39,13 +39,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-                    <a href="<?= base_url() ?>" class="nav-item nav-link active">Home</a>
-                    <a href="<?= base_url('about') ?>" class="nav-item nav-link">About</a>
-                    <a href="<?= base_url('service') ?>" class="nav-item nav-link">Services</a>
-                    <a href="<?= base_url('contact') ?>" class="nav-item nav-link">Contact</a>
+                <?php foreach ($menu as $nav): ?>
+                    <a href="<?= base_url($nav['url']) ?>" 
+                        class="nav-item nav-link <?= (current_url() == base_url($nav['url'])) ? 'active' : '' ?>">
+                        <?= $nav['menu_name'] ?>
+                    </a>
+                <?php endforeach; ?>
                 </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="#" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
+                <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
             </div>
         </nav>
     </div>

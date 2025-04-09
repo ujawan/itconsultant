@@ -27,15 +27,7 @@ $routes->group('admin', static function($routes) {
     $routes->get('blog/new', 'Admin::newPost');
     $routes->post('blog/create', 'Admin::createPost');
     
-    // Team Management
-    $routes->get('team', 'Admin::team');
-    $routes->get('team/new', 'Admin::newTeamMember');
-    $routes->post('team/create', 'Admin::createTeamMember');
-    
     // Testimonials Management
-    $routes->get('testimonials', 'Admin::testimonials');
-    $routes->get('testimonials/new', 'Admin::newTestimonial');
-    $routes->post('testimonials/create', 'Admin::createTestimonial');
     
     // Settings
     $routes->get('settings', 'Admin::settings');
@@ -57,6 +49,19 @@ $routes->get('admin/whychooseus', 'Admin::whychooseus');
 $routes->post('/admin/whychooseusedit/(:num)', 'Admin::updateWhyChooseUs/$1');
 $routes->get('admin/ourservices', 'Admin::ourServices');
 $routes->post('/admin/servicesedit/(:num)', 'Admin::updateOurServices/$1');
+$routes->get('admin/quote', 'Admin::quote');
+$routes->post('/admin/quoteedit/(:num)', 'Admin::updateQuote/$1');
+$routes->get('admin/pricing', 'Admin::pricing');
+$routes->post('/admin/pricingedit/(:num)', 'Admin::updatePricing/$1');
+$routes->get('admin/testimonials', 'Admin::Testimonials');
+$routes->post('/admin/testimonialsedit/(:num)', 'Admin::updateTestimonials/$1');
+$routes->get('admin/team', 'Admin::Team');
+$routes->post('/admin/teamedit/(:num)', 'Admin::updateTeam/$1');
+$routes->get('admin/brand', 'Admin::brand');
+$routes->post('/admin/brandedit/(:num)', 'Admin::updateBrand/$1');
+
+
+
 
 
 

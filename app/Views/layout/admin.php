@@ -99,15 +99,15 @@ $uri = service('uri');
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($uri->getSegment(2) === 'blog' ? 'active' : '') ?>" 
-                               href="<?= site_url('admin/blog') ?>">
-                                <i class="fas fa-blog"></i> Blog Posts
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'pricing' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/pricing') ?>">
+                                <i class="fas fa-money-bill"></i> Pricing Plan
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($uri->getSegment(2) === 'team' ? 'active' : '') ?>" 
-                               href="<?= site_url('admin/team') ?>">
-                                <i class="fas fa-users"></i> Team Members
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'quote' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/quote') ?>">
+                                <i class="fas fa-blog"></i> Request Quote
                             </a>
                         </li>
                         <li class="nav-item">
@@ -117,9 +117,15 @@ $uri = service('uri');
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($uri->getSegment(2) === 'settings' ? 'active' : '') ?>" 
-                               href="<?= site_url('admin/settings') ?>">
-                                <i class="fas fa-cog"></i> Settings
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'team' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/team') ?>">
+                                <i class="fas fa-users"></i> Team Members
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'brand' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/brand') ?>">
+                                <i class="fas fa-cog"></i> Brand Logo
                             </a>
                         </li>
                     </ul>
