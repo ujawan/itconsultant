@@ -12,8 +12,8 @@ class Home extends BaseController
     public function __construct() 
     {
         $this->homeModel = new homeModel();
-        $this->data['menu'] = $this->homeModel->getMenuData();
-        $this->data['current_url'] = current_url();
+        
+        $this->data['headerAddress'] = $this->homeModel->getHeaderAddress();
     }
 
     public function index(): string

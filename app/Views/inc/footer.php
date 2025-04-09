@@ -24,21 +24,42 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">123 Street, New York, USA</p>
+                                <?php if (!empty($headerAddress['header_address'])): ?>
+                <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i><?= esc($headerAddress['header_address']) ?></small>
+                <?php endif; ?>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">info@example.com</p>
+                                <?php if (!empty($headerAddress['header_email'])): ?>
+                <small class="text-light"><i class="fa fa-envelope-open me-2"></i><?= esc($headerAddress['header_email']) ?></small>
+                <?php endif; ?>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+012 345 67890</p>
+                                <?php if (!empty($headerAddress['header_phone'])): ?>
+                <small class="text-light"><i class="fa fa-phone-alt me-2"></i><?= esc($headerAddress['header_phone']) ?></small>
+                <?php endif; ?>
                             </div>
                             <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                                <?php if (!empty($headerAddress['twitter_url'])): ?>
+                <a class="btn btn-primary btn-square me-2" href="<?= esc($headerAddress['twitter_url']) ?>"><i class="fab fa-twitter fw-normal"></i></a>
+                <?php endif; ?>
+                
+                <?php if (!empty($headerAddress['facebook_url'])): ?>
+                <a class="btn btn-primary btn-square me-2" href="<?= esc($headerAddress['facebook_url']) ?>"><i class="fab fa-facebook-f fw-normal"></i></a>
+                <?php endif; ?>
+                
+                <?php if (!empty($headerAddress['linkedin_url'])): ?>
+                <a class="btn btn-primary btn-square me-2" href="<?= esc($headerAddress['linkedin_url']) ?>"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                <?php endif; ?>
+                
+                <?php if (!empty($headerAddress['instagram_url'])): ?>
+                <a class="btn btn-primary btn-square me-2" href="<?= esc($headerAddress['instagram_url']) ?>"><i class="fab fa-instagram fw-normal"></i></a>
+                <?php endif; ?>
+                
+                <?php if (!empty($headerAddress['youtube_url'])): ?>
+                <a class="btn btn-primary btn-square" href="<?= esc($headerAddress['youtube_url']) ?>"><i class="fab fa-youtube fw-normal"></i></a>
+                <?php endif; ?>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">

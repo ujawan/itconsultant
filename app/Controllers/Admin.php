@@ -760,5 +760,35 @@ public function deleteMenu($id)
     return redirect()->to('admin/menu');
 }
 
+public function headerAddress(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('/admin/login');
+    }
+
+    $data['headerAddress'] = $this->homeModel->getHeaderAddress();
+    return view('admin/headeraddress', $data);
+}
+
+public function updateHeaderAddress()
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('/admin/login');
+    }
+
+    $data = [
+        'header_address' => $this->request->getPost('header_address'),
+        'header_phone' => $this->request->getPost('header_phone'),
+        'header_email' => $this->request->getPost('header_email'),
+        'twitter_url' => $this->request->getPost('twitter_url'),
+        'facebook_url' => $this->request->getPost('facebook_url'),
+        'linkedin_url' => $this->request->getPost('linkedin_url'),
+        'instagram_url' => $this->request->getPost('instagram_url'),
+        'youtube_url' => $this->request->getPost('youtube_url')
+    ];
+
+    $this->homeModel->updateHeaderAddress($data);
+    return redirect()->to('admin')->with('success', 'Header Address updated successfully');
+}
 }
    

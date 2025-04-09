@@ -75,10 +75,8 @@ $routes->get('admin/brand', 'Admin::brand');
 $routes->post('admin/brand/add', 'Admin::addBrand');
 $routes->post('admin/brandedit/(:num)', 'Admin::updateBrand/$1');
 $routes->get('admin/brand/delete/(:num)', 'Admin::deleteBrand/$1');
-$routes->get('admin/menu', 'Admin::menu');
-$routes->post('/admin/menuedit/(:num)', 'Admin::updateMenu/$1');
-$routes->match(['GET', 'POST'], 'admin/menu/add', 'Admin::addMenu');
-$routes->get('admin/menu/delete/(:num)', 'Admin::deleteMenu/$1');
+$routes->get('admin/headeraddress', 'Admin::headerAddress');
+$routes->post('admin/headeraddress/update', 'Admin::updateHeaderAddress');
 
 
 

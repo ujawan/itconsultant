@@ -72,9 +72,9 @@ $uri = service('uri');
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?= ($uri->getSegment(2) === 'menu' ? 'active' : '') ?>" 
-                               href="<?= site_url('admin/menu') ?>">
-                                <i class="fas fa-list"></i> Menu
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'headeraddress' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/headeraddress') ?>">
+                                <i class="fas fa-list"></i> Header 
                             </a>
                         </li>
                         <li class="nav-item">

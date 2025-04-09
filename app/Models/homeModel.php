@@ -157,24 +157,16 @@ public function deleteBrand($id)
     return $this->db->table('brand_logo')->where('brand_id', $id)->delete();
 }
 
-    public function getMenuData()
-    {
-        return $this->db->table('menu')
-                        ->orderBy('order_num', 'ASC')
-                        ->get()
-                        ->getResultArray();
-    }
-    public function updateMenu($id, $data)
-    {
-        return $this->db->table('menu')->where('menu_id', $id)->update($data);
-    }
-    public function addMenu($data)
-    {
-        return $this->db->table('menu')->insert($data);
-    }
-    public function deleteMenu($id)
-    {
-        return $this->db->table('menu')->where('menu_id', $id)->delete();
-    }
+    
 
+
+    public function getHeaderAddress()
+{
+    return $this->db->table('header_adress')->get()->getRowArray();
+}
+
+public function updateHeaderAddress($data)
+{
+    return $this->db->table('header_adress')->where('header_id', 1)->update($data);
+}
 }
