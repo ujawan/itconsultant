@@ -63,6 +63,7 @@ class Admin extends BaseController
         }
         $this->homeModel = new homeModel();
         $data['footer'] = $this->homeModel->getFooterData();
+        $data['headerAddress'] = $this->homeModel->getHeaderAddress();
 
         return view('admin/login', $data);
     }
