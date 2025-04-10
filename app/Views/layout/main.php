@@ -10,8 +10,6 @@
     <title><?= $this->renderSection('title') ?> - IT Consulting</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     
-    <!-- Favicon -->
-    <link href="<?= base_url('favicon.ico') ?>" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +29,11 @@
 
     <!-- Template Stylesheet -->
     <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
+        <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/img/favicon_io/apple-touch-icon.png') ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/img/favicon_io/favicon-32x32.png')?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/img/favicon_io/favicon-16x16.png')?>">
+<link rel="manifest" href="<?= base_url('assets/img/favicon_io//site.webmanifest')?>">
     
     <?= $this->renderSection('styles') ?>
 </head>
