@@ -61,8 +61,10 @@ class Admin extends BaseController
             session()->setFlashdata('error', 'Invalid username or password');
             return redirect()->back();
         }
+        $this->homeModel = new homeModel();
+        $data['footer'] = $this->homeModel->getFooterData();
 
-        return view('admin/login');
+        return view('admin/login', $data);
     }
 
     public function dashboard(): string|RedirectResponse

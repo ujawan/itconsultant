@@ -1330,3 +1330,46 @@ WARNING - 2025-04-10 07:15:46 --> [DEPRECATED] Creation of dynamic property App\
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 DEBUG - 2025-04-10 07:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 07:32:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 07:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 07:32:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 07:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 07:32:51 --> ErrorException: Undefined variable $footer
+[Method: GET, Route: admin/login]
+in APPPATH\Views\inc\footer.php on line 12.
+ 1 APPPATH\Views\inc\footer.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $footer', 'C:\\xampp\\htdocs\\itconsultant\\app\\Views\\inc\\footer.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\itconsultant\\app\\Views\\inc\\footer.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('inc/footer', null, true)
+ 5 APPPATH\Views\layout\main.php(43): CodeIgniter\View\View->include('inc/footer')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\itconsultant\\app\\Views\\layout\\main.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/main', [], true)
+ 9 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/login', [], true)
+10 APPPATH\Controllers\Admin.php(65): view('admin/login')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->login()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-04-10 07:36:41 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 07:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
