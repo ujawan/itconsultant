@@ -29,7 +29,7 @@
                     </div>
                     <div class="ps-4">
                         <h5 class="mb-2"><?= $contacts['phone_heading'] ?? 'Call us' ?></h5>
-                        <h4 class="text-primary mb-0"><?= $contacts['phone'] ?? '+1234567890' ?></h4>
+                        <h4 class="text-primary mb-0"><?= $contacts['phone_number'] ?? '+1234567890' ?></h4>
                     </div>
                 </div>
             </div>

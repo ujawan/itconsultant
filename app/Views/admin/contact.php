@@ -38,8 +38,8 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Phone Number</label>
-                                <input type="text" class="form-control" name="phone" 
-                                       value="<?= esc($contact['phone'] ?? '') ?>">
+                                <input type="text" class="form-control" name="phone_number" 
+                                       value="<?= esc($contact['phone_number'] ?? '') ?>">
                             </div>
                         </div>
                     </div>

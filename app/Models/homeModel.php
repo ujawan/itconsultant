@@ -204,4 +204,24 @@ public function updateHeaderLogo($id, $data)
     return $this->db->table('header_logo')->where('header_logo_id', $id)->update($data);
 }
 
+public function countServices()
+{
+    return $this->db->table('services')->countAllResults();
+}
+
+public function countTeamMembers()
+{
+    return $this->db->table('team')->countAllResults();
+}
+
+public function countTestimonials()
+{
+    return $this->db->table('testimonial')->countAllResults();
+}
+
+public function countBrands()
+{
+    return $this->db->table('brand_logo')->countAllResults();
+}
+
 }
