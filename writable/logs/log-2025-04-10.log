@@ -1330,3 +1330,132 @@ WARNING - 2025-04-10 07:15:46 --> [DEPRECATED] Creation of dynamic property App\
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 DEBUG - 2025-04-10 07:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-10 07:26:48 --> mysqli_sql_exception: Table 'it_consulting.footer' doesn't exist in F:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 F:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 F:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\xampp\htdocs\itconsultant\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\xampp\htdocs\itconsultant\app\Models\homeModel.php(187): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\xampp\htdocs\itconsultant\app\Controllers\Home.php(17): App\Models\homeModel->getFooterData()
+#6 F:\xampp\htdocs\itconsultant\system\CodeIgniter.php(903): App\Controllers\Home->__construct()
+#7 F:\xampp\htdocs\itconsultant\system\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+#8 F:\xampp\htdocs\itconsultant\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\xampp\htdocs\itconsultant\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 F:\xampp\htdocs\itconsultant\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\xampp\htdocs\itconsultant\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-04-10 07:26:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'it_consulting.footer' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `footer`', [], false)
+ 2 APPPATH\Models\homeModel.php(187): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(17): App\Models\homeModel->getFooterData()
+ 4 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 07:26:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'it_consulting.footer' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `footer`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `footer`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `footer`', [], false)
+ 4 APPPATH\Models\homeModel.php(187): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(17): App\Models\homeModel->getFooterData()
+ 6 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 07:26:48 --> [Caused by] mysqli_sql_exception: Table 'it_consulting.footer' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `footer`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `footer`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `footer`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `footer`', [], false)
+ 5 APPPATH\Models\homeModel.php(187): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(17): App\Models\homeModel->getFooterData()
+ 7 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Home->__construct()
+ 8 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 07:30:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 07:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 07:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 07:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 07:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 07:31:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 07:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 07:31:58 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 07:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 07:31:58 --> ErrorException: Undefined variable $footer
+[Method: GET, Route: admin/login]
+in APPPATH\Views\inc\footer.php on line 12.
+ 1 APPPATH\Views\inc\footer.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $footer', 'F:\\xampp\\htdocs\\itconsultant\\app\\Views\\inc\\footer.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\xampp\\htdocs\\itconsultant\\app\\Views\\inc\\footer.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('inc/footer', null, true)
+ 5 APPPATH\Views\layout\main.php(43): CodeIgniter\View\View->include('inc/footer')
+ 6 SYSTEMPATH\View\View.php(224): include('F:\\xampp\\htdocs\\itconsultant\\app\\Views\\layout\\main.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/main', [], true)
+ 9 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/login', [], true)
+10 APPPATH\Controllers\Admin.php(65): view('admin/login')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->login()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2025-04-10 07:32:10 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 07:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-10 07:32:10 --> ErrorException: Undefined variable $footer
+[Method: GET, Route: admin/login]
+in APPPATH\Views\inc\footer.php on line 12.
+ 1 APPPATH\Views\inc\footer.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $footer', 'F:\\xampp\\htdocs\\itconsultant\\app\\Views\\inc\\footer.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('F:\\xampp\\htdocs\\itconsultant\\app\\Views\\inc\\footer.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(475): CodeIgniter\View\View->render('inc/footer', null, true)
+ 5 APPPATH\Views\layout\main.php(43): CodeIgniter\View\View->include('inc/footer')
+ 6 SYSTEMPATH\View\View.php(224): include('F:\\xampp\\htdocs\\itconsultant\\app\\Views\\layout\\main.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(240): CodeIgniter\View\View->render('layout/main', [], true)
+ 9 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/login', [], true)
+10 APPPATH\Controllers\Admin.php(65): view('admin/login')
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->login()
+12 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
