@@ -68,22 +68,6 @@ class Admin extends BaseController
         return view('admin/login', $data);
     }
 
-    public function dashboard(): string|RedirectResponse
-    {
-        if (!session()->get('isAdminLoggedIn')) {
-            return redirect()->to('admin/login');
-        }
-
-        // Get counts for dashboard stats
-        return view('admin/dashboard', [
-            'stats' => [
-                'services' => 12,
-                'posts' => 45,
-                'team' => 8,
-                'testimonials' => 24
-            ]
-        ]);
-    }
 
     public function logout(): RedirectResponse
     {
@@ -810,7 +794,7 @@ public function updateContact($id)
     $data = [
         'heading' => $this->request->getPost('heading'),
         'phone_heading' => $this->request->getPost('phone_heading'),
-        'phone' => $this->request->getPost('phone'),
+        'phone_number' => $this->request->getPost('phone_number'),
         'email_heading' => $this->request->getPost('email_heading'),
         'email' => $this->request->getPost('email'),
         'address_heading' => $this->request->getPost('address_heading'),
@@ -869,6 +853,7 @@ public function headerLogo()
     return view('admin/headerlogo', $data);
 }
 
+
 public function updateHeaderLogo($id)
 {
     if (!$this->checkLogin()) {
@@ -905,5 +890,22 @@ public function updateHeaderLogo($id)
     
     return redirect()->to('admin')->with('error', 'No file was uploaded or an error occurred');
 }
+public function dashboard()
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+
+    $this->homeModel = new homeModel();
+    $data = [
+        'servicesCount' => $this->homeModel->countServices(),
+        'teamCount' => $this->homeModel->countTeamMembers(),
+        'testimonialsCount' => $this->homeModel->countTestimonials(),
+        'brandsCount' => $this->homeModel->countBrands()
+    ];
+
+    return view('admin/dashboard', $data);
 }
-   
+
+}
+
