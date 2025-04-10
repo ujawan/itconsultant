@@ -78,6 +78,12 @@ $uri = service('uri');
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'headerlogo' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/headerlogo') ?>">
+                                <i class="fas fa-image"></i> Header Logo
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link <?= ($uri->getSegment(2) === 'home' ? 'active' : '') ?>" 
                                href="<?= site_url('admin/home') ?>">
                                 <i class="fas fa-home"></i> Home
@@ -132,6 +138,18 @@ $uri = service('uri');
                             <a class="nav-link <?= ($uri->getSegment(2) === 'brand' ? 'active' : '') ?>" 
                                href="<?= site_url('admin/brand') ?>">
                                 <i class="fas fa-cog"></i> Brand Logo
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'contact' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/contact') ?>">
+                                <i class="fas fa-phone"></i> Contact Us
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link <?= ($uri->getSegment(2) === 'footer' ? 'active' : '') ?>" 
+                               href="<?= site_url('admin/footer') ?>">
+                                <i class="fas fa-cog"></i> Footer
                             </a>
                         </li>
                     </ul>

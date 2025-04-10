@@ -1,4 +1,4 @@
-<?= $this->extend('layout/admin') ?>
+<?= $this->extend('layout/main') ?>
 
 <?= $this->section('title') ?>Admin Login<?= $this->endSection() ?>
 

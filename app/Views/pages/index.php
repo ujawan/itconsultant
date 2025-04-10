@@ -116,7 +116,7 @@
                             <h4 class="text-primary mb-0"><?= $about['about_phone'] ?></h4>
                         </div>
                     </div>
-                    <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
+                    <a href="<?= base_url('contact') ?>" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -202,7 +202,7 @@
                 </div>
                 <h4 class="mb-3"><?= $service['service_name'] ?></h4>
                 <p class="m-0"><?= $service['service_text'] ?></p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="<?= base_url('service') ?>">
                     <i class="bi bi-arrow-right"></i>
                 </a>
             </div>
@@ -210,7 +210,7 @@
     <?php endforeach; ?>
 </div>
             
-            <div class="row g-5">
+      <!--   <div class="row g-5">
                 <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
                     <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
                         <h3 class="text-white mb-3">Call Us For Quote</h3>
@@ -218,7 +218,7 @@
                         <h2 class="text-white mb-0">+012 345 6789</h2>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- Service End -->

@@ -790,5 +790,117 @@ public function updateHeaderAddress()
     $this->homeModel->updateHeaderAddress($data);
     return redirect()->to('admin')->with('success', 'Header Address updated successfully');
 }
+
+public function contact(): string|RedirectResponse
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel(); // Instantiate the model
+
+    $data['contact'] = $this->homeModel->getContactData();
+    return view('admin/contact', $data);
+}
+
+public function updateContact($id)
+{
+    $data = [
+        'heading' => $this->request->getPost('heading'),
+        'phone_heading' => $this->request->getPost('phone_heading'),
+        'phone' => $this->request->getPost('phone'),
+        'email_heading' => $this->request->getPost('email_heading'),
+        'email' => $this->request->getPost('email'),
+        'address_heading' => $this->request->getPost('address_heading'),
+        'address' => $this->request->getPost('address')
+    ];
+
+    $this->homeModel->updateContactData($data);
+    return redirect()->to('admin')->with('success', 'Contact Information updated successfully');
+}
+
+public function footer()
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel();
+    $data['footer'] = $this->homeModel->getFooterData();
+    return view('admin/footer', $data);
+}
+
+public function updateFooterData($id)
+{
+    $data = [
+        'footer_text' => $this->request->getPost('footer_text')
+    ];
+
+    // Handle logo upload
+    $logo = $this->request->getFile('footer_logo');
+    if ($logo->isValid() && !$logo->hasMoved()) {
+        $newName = $logo->getRandomName();
+        
+        // Move file to uploads directory
+        $logo->move('assets/img', $newName);
+        
+        // Add logo filename to data array
+        $data['footer_logo'] = $newName;
+
+        // Delete old logo if exists
+        $oldLogo = $this->homeModel->getFooterData()['footer_logo'] ?? '';
+        if ($oldLogo && file_exists(FCPATH . 'assets/img/' . $oldLogo)) {
+            unlink(FCPATH . 'assets/img/' . $oldLogo);
+        }
+    }
+
+    $this->homeModel->updateFooterData($data);
+    return redirect()->to('admin')->with('success', 'Footer updated successfully');
+}
+
+public function headerLogo()
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+    $this->homeModel = new homeModel();
+    $data['headerlogo'] = $this->homeModel->getHeaderLogo();
+    return view('admin/headerlogo', $data);
+}
+
+public function updateHeaderLogo($id)
+{
+    if (!$this->checkLogin()) {
+        return redirect()->to('admin/login');
+    }
+
+    $data = [];
+    $logo = $this->request->getFile('logo_image');
+    
+    if ($logo && $logo->isValid() && !$logo->hasMoved()) {
+        $newName = $logo->getRandomName();
+        
+        // Create directory if it doesn't exist
+        if (!is_dir('assets/img')) {
+            mkdir('assets/img', 0777, true);
+        }
+        
+        // Move file
+        if ($logo->move('assets/img', $newName)) {
+            $data['logo_image'] = $newName;
+            
+            // Delete old logo
+            $oldLogo = $this->homeModel->getHeaderLogo()['logo_image'] ?? '';
+            if ($oldLogo && file_exists(FCPATH . 'assets/img/' . $oldLogo)) {
+                unlink(FCPATH . 'assets/img/' . $oldLogo);
+            }
+        }
+    }
+    
+    if (!empty($data)) {
+        $this->homeModel->updateHeaderLogo(1, $data);
+        return redirect()->to('admin')->with('success', 'Header Logo updated successfully');
+    }
+    
+    return redirect()->to('admin')->with('error', 'No file was uploaded or an error occurred');
+}
 }
    

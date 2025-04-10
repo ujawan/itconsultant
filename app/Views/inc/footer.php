@@ -4,10 +4,12 @@
             <div class="row gx-5">
                 <div class="col-lg-4 col-md-6 footer-about">
                     <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="<?= base_url() ?>" class="navbar-brand">
-                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1>
-                        </a>
-                        <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
+                    <a href="<?= base_url() ?>" class="navbar-brand">
+        <?php if (!empty($footer['footer_logo'])): ?>
+            <img src="<?= base_url('assets/img/' . $footer['footer_logo']) ?>" alt="Logo" class="img-fluid" style="max-height: 60px;">
+        <?php endif; ?>
+    </a>
+    <p class="mt-3 mb-4"><?= $footer['footer_text'] ?></p>
                         <form action="">
                             <div class="input-group">
                                 <input type="text" class="form-control border-white p-3" placeholder="Your Email">

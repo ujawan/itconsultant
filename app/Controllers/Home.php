@@ -14,6 +14,8 @@ class Home extends BaseController
         $this->homeModel = new homeModel();
         
         $this->data['headerAddress'] = $this->homeModel->getHeaderAddress();
+        $this->data['footer'] = $this->homeModel->getFooterData();
+        $this->data['headerlogo'] = $this->homeModel->getHeaderLogo();
     }
 
     public function index(): string
@@ -50,14 +52,13 @@ class Home extends BaseController
         $data['brand_logos'] = $this->homeModel->getBrandLogo();
         return view('pages/service', $data);
     }
-
     public function contact(): string
-    {
-        return view('pages/contact', $this->data);  // Pass shared data
+    {  
+        $data = $this->data;
+        $data['contacts'] = $this->homeModel->getContactData();
+        $data['brand_logos'] = $this->homeModel->getBrandLogo();
+        return view('pages/contact', $data);  // Pass shared data
     }
 
-    public function quote(): string
-    {
-        return view('pages/quote', $this->data);  // Pass shared data
-    }
+   
 }

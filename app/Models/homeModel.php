@@ -169,4 +169,39 @@ public function updateHeaderAddress($data)
 {
     return $this->db->table('header_adress')->where('header_id', 1)->update($data);
 }
+
+public function getContactData()
+{
+    return $this->db->table('contact_us')->get()->getRowArray();
+}
+
+public function updateContactData($data)
+{
+    return $this->db->table('contact_us')
+                    ->where('contact_us_id', 1)
+                    ->update($data);
+}
+
+public function getFooterData()
+{
+    return $this->db->table('footer')->get()->getRowArray();
+}
+
+public function updateFooterData($data)
+{
+    return $this->db->table('footer')
+                    ->where('footer_id', 1)
+                    ->update($data);
+}
+public function getHeaderLogo()
+{
+    return $this->db->table('header_logo')->get()->getRowArray();
+}
+
+
+public function updateHeaderLogo($id, $data)
+{
+    return $this->db->table('header_logo')->where('header_logo_id', $id)->update($data);
+}
+
 }

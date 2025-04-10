@@ -64,7 +64,9 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="<?= base_url() ?>" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+                <?php if (!empty($headerlogo['logo_image'])): ?>
+                    <img src="<?= base_url('assets/img/' . $headerlogo['logo_image']) ?>" alt="Logo" class="img-fluid" style="max-height: 60px;">
+                <?php endif; ?>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
