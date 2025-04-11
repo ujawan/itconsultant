@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Generation Time: Apr 11, 2025 at 06:26 AM
-=======
--- Generation Time: Apr 10, 2025 at 01:49 PM
->>>>>>> b36cfe2e1f5ec88eeab66b022b946d463b4e7ec7
+-- Generation Time: Apr 11, 2025 at 06:46 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -193,7 +189,7 @@ CREATE TABLE `header_logo` (
 --
 
 INSERT INTO `header_logo` (`header_logo_id`, `logo_image`, `created_at`, `updated_at`) VALUES
-(1, '1744270952_7e3d3ad78289daeecad4.png', '2025-04-10 06:37:32', '2025-04-10 07:42:32');
+(1, '1744286757_37d37ed09901a0cd35b1.png', '2025-04-10 06:37:32', '2025-04-10 12:05:57');
 
 -- --------------------------------------------------------
 
@@ -228,7 +224,7 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`home_id`, `bkimg_1`, `bkimg_2`, `hero_small_heading`, `hero_heading`, `happy_clients_text`, `happy_clients`, `projects_done_text`, `projects_done`, `win_awards_text`, `win_awards`, `services_heading`, `services_cardinfo_heading`, `services_cardinfo_text`, `services_cardinfo_phone`, `pricing_heading`, `testimonial_heading`, `team_heading`, `timestamp`) VALUES
-(1, '1744099585_4972fb03e9fbba70518e.jpg', '1744284467_02c9795ef84283ea5fc6.jpg', 'Creative & Supports', 'Creative & Innovative Digital Solutions', 'Happy Clients', '122', 'Projects Done', '99', 'Win Awards', '125', 'Custom IT Solutions for Your Successful Business', '', '', '0', 'We are Offering Competitive Prices for Our Clients', 'What Our Clients Say About Our Digital Services', 'Professional Stuffs Ready to Help Your Business', '2025-03-24 08:35:25');
+(1, '1744099585_4972fb03e9fbba70518e.jpg', 'carousel-2.jpg', 'Creative & Supports', 'Creative & Innovative Digital Solutions', 'Happy Clients', '122', 'Projects Done', '99', 'Win Awards', '125', 'Custom IT Solutions for Your Successful Business', '', '', '0', 'We are Offering Competitive Prices for Our Clients', 'What Our Clients Say About Our Digital Services', 'Professional Stuffs Ready to Help Your Business', '2025-03-24 08:35:25');
 
 -- --------------------------------------------------------
 
@@ -291,19 +287,20 @@ CREATE TABLE `services` (
   `service_id` int(100) NOT NULL,
   `service_name` varchar(255) NOT NULL,
   `service_text` varchar(500) NOT NULL,
-  `timestamp` datetime NOT NULL DEFAULT current_timestamp()
+  `timestamp` datetime NOT NULL DEFAULT current_timestamp(),
+  `service_icon` varchar(50) DEFAULT 'fa-shield-alt'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `services`
 --
 
-INSERT INTO `services` (`service_id`, `service_name`, `service_text`, `timestamp`) VALUES
-(1, 'Cyber Security', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:52:44'),
-(2, 'Data Analytics', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02'),
-(3, 'Web development', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02'),
-(4, 'Apps Development', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02'),
-(5, 'SEO Optimization', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02');
+INSERT INTO `services` (`service_id`, `service_name`, `service_text`, `timestamp`, `service_icon`) VALUES
+(1, 'Cyber Security', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:52:44', 'fa-shield-alt'),
+(2, 'Data Analytics', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02', 'fa-server'),
+(3, 'Web development', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02', 'fa-laptop'),
+(4, 'Apps Development', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02', 'fa-code'),
+(5, 'SEO Optimization', 'Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed', '2025-04-07 15:55:02', 'fa-network-wired');
 
 -- --------------------------------------------------------
 
@@ -506,7 +503,7 @@ ALTER TABLE `quote`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `service_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `service_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `team`
