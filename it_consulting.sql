@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Apr 11, 2025 at 06:26 AM
+=======
+-- Generation Time: Apr 10, 2025 at 01:49 PM
+>>>>>>> b36cfe2e1f5ec88eeab66b022b946d463b4e7ec7
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -78,24 +82,6 @@ INSERT INTO `brand_logo` (`brand_id`, `brand_logo`, `timestemp`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
---
-
-CREATE TABLE `contact` (
-  `contact_id` int(100) NOT NULL,
-  `contact_heading` varchar(255) NOT NULL,
-  `call_text` varchar(255) NOT NULL,
-  `phone_number` int(100) NOT NULL,
-  `email_text` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `address_text` varchar(255) NOT NULL,
-  `address` varchar(255) NOT NULL,
-  `timestamp` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `contact_us`
 --
 
@@ -103,7 +89,7 @@ CREATE TABLE `contact_us` (
   `contact_us_id` int(100) NOT NULL,
   `heading` varchar(255) NOT NULL,
   `phone_heading` varchar(255) NOT NULL,
-  `phone` int(100) NOT NULL,
+  `phone_number` varchar(100) NOT NULL,
   `email_heading` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `address_heading` varchar(255) NOT NULL,
@@ -114,8 +100,8 @@ CREATE TABLE `contact_us` (
 -- Dumping data for table `contact_us`
 --
 
-INSERT INTO `contact_us` (`contact_us_id`, `heading`, `phone_heading`, `phone`, `email_heading`, `email`, `address_heading`, `address`) VALUES
-(1, 'If You Have Any Query, Feel Free To Contact Us', 'Call and ask', 2147483647, 'Email to get free quote', 'info001@example.com', 'Visit our office near', 'XYS Street, NY, USA');
+INSERT INTO `contact_us` (`contact_us_id`, `heading`, `phone_heading`, `phone_number`, `email_heading`, `email`, `address_heading`, `address`) VALUES
+(1, 'If You Have Any Query, Feel Free To Contact Us', 'Call and ask', '+03361234566', 'Email to get free quote', 'info001@example.com', 'Visit our office near', 'XYS Street, NY, USA');
 
 -- --------------------------------------------------------
 
@@ -222,15 +208,15 @@ CREATE TABLE `home` (
   `hero_small_heading` varchar(255) NOT NULL,
   `hero_heading` varchar(255) NOT NULL,
   `happy_clients_text` varchar(255) NOT NULL,
-  `happy_clients` int(100) NOT NULL,
+  `happy_clients` varchar(100) NOT NULL,
   `projects_done_text` varchar(255) NOT NULL,
-  `projects_done` int(100) NOT NULL,
+  `projects_done` varchar(100) NOT NULL,
   `win_awards_text` varchar(255) NOT NULL,
-  `win_awards` int(100) NOT NULL,
+  `win_awards` varchar(100) NOT NULL,
   `services_heading` varchar(255) NOT NULL,
   `services_cardinfo_heading` varchar(255) NOT NULL,
   `services_cardinfo_text` varchar(255) NOT NULL,
-  `services_cardinfo_phone` int(100) NOT NULL,
+  `services_cardinfo_phone` varchar(100) NOT NULL,
   `pricing_heading` varchar(255) NOT NULL,
   `testimonial_heading` varchar(255) NOT NULL,
   `team_heading` varchar(255) NOT NULL,
@@ -242,7 +228,7 @@ CREATE TABLE `home` (
 --
 
 INSERT INTO `home` (`home_id`, `bkimg_1`, `bkimg_2`, `hero_small_heading`, `hero_heading`, `happy_clients_text`, `happy_clients`, `projects_done_text`, `projects_done`, `win_awards_text`, `win_awards`, `services_heading`, `services_cardinfo_heading`, `services_cardinfo_text`, `services_cardinfo_phone`, `pricing_heading`, `testimonial_heading`, `team_heading`, `timestamp`) VALUES
-(1, '1744099585_4972fb03e9fbba70518e.jpg', '1744271006_eb099c24feaecaf3f8d7.jpg', 'Creative & Supports', 'Creative & Innovative Digital Solutions', 'Happy Clients', 122, 'Projects Done', 99, 'Win Awards', 125, 'Custom IT Solutions for Your Successful Business', '', '', 0, 'We are Offering Competitive Prices for Our Clients', 'What Our Clients Say About Our Digital Services', 'Professional Stuffs Ready to Help Your Business', '2025-03-24 08:35:25');
+(1, '1744099585_4972fb03e9fbba70518e.jpg', '1744284467_02c9795ef84283ea5fc6.jpg', 'Creative & Supports', 'Creative & Innovative Digital Solutions', 'Happy Clients', '122', 'Projects Done', '99', 'Win Awards', '125', 'Custom IT Solutions for Your Successful Business', '', '', '0', 'We are Offering Competitive Prices for Our Clients', 'What Our Clients Say About Our Digital Services', 'Professional Stuffs Ready to Help Your Business', '2025-03-24 08:35:25');
 
 -- --------------------------------------------------------
 
@@ -387,12 +373,6 @@ ALTER TABLE `brand_logo`
   ADD PRIMARY KEY (`brand_id`);
 
 --
--- Indexes for table `contact`
---
-ALTER TABLE `contact`
-  ADD PRIMARY KEY (`contact_id`);
-
---
 -- Indexes for table `contact_us`
 --
 ALTER TABLE `contact_us`
@@ -473,12 +453,6 @@ ALTER TABLE `about`
 --
 ALTER TABLE `brand_logo`
   MODIFY `brand_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- AUTO_INCREMENT for table `contact`
---
-ALTER TABLE `contact`
-  MODIFY `contact_id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contact_us`

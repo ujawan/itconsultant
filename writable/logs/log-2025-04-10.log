@@ -2949,32 +2949,126 @@ in SYSTEMPATH\Debug\Toolbar\Collectors\History.php on line 82.
 10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 =======
 DEBUG - 2025-04-10 09:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
+WARNING - 2025-04-10 09:30:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+=======
 >>>>>>> f23b7cbe33bc736fe05d45345d120e550246c3ad
 WARNING - 2025-04-10 09:44:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+>>>>>>> 40bfdcce92935adf387fd18f4850370594784213
  1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
  2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+DEBUG - 2025-04-10 09:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:30:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+=======
 DEBUG - 2025-04-10 09:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 WARNING - 2025-04-10 09:44:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+>>>>>>> 40bfdcce92935adf387fd18f4850370594784213
  1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
  2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+DEBUG - 2025-04-10 09:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:30:48 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+=======
 DEBUG - 2025-04-10 09:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 WARNING - 2025-04-10 09:44:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+>>>>>>> 40bfdcce92935adf387fd18f4850370594784213
  1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
  2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
  3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+DEBUG - 2025-04-10 09:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:30:51 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 09:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:31:00 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 09:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:31:02 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 09:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:31:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 09:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:31:05 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 09:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:31:07 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 09:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 09:35:09 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 09:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 10:02:04 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 10:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 10:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 10:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 10:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-04-10 10:03:13 --> [DEPRECATED] Creation of dynamic property App\Controllers\Admin::$homeModel is deprecated in APPPATH\Controllers\Admin.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-10 10:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-04-10 10:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
 DEBUG - 2025-04-10 09:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-04-10 09:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+<<<<<<< HEAD
 ERROR - 2025-04-10 11:45:01 --> mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in F:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php:327
 Stack trace:
 #0 F:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact...', 0)
@@ -2991,6 +3085,25 @@ Stack trace:
 #11 F:\xampp\htdocs\itconsultant\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 #12 {main}
 CRITICAL - 2025-04-10 11:45:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+=======
+>>>>>>> 40bfdcce92935adf387fd18f4850370594784213
+ERROR - 2025-04-10 11:26:21 --> mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact...', 0)
+#1 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact...')
+#2 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact...')
+#3 C:\xampp\htdocs\itconsultant\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact...', Array, false)
+#4 C:\xampp\htdocs\itconsultant\app\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\itconsultant\app\Controllers\Admin.php(804): App\Models\homeModel->updateContactData(Array)
+#6 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+#7 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\itconsultant\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\itconsultant\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\itconsultant\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-04-10 11:26:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+>>>>>>> b36cfe2e1f5ec88eeab66b022b946d463b4e7ec7
 [Method: POST, Route: admin/contactupdate/1]
 in SYSTEMPATH\Database\BaseConnection.php on line 692.
  1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
@@ -3003,7 +3116,135 @@ WHERE `contact_us_id` = :contact_us_id:', [...], false)
  7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-04-10 11:45:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+=======
+CRITICAL - 2025-04-10 11:26:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'8665021690\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'8665021690\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 4 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:26:21 --> [Caused by] mysqli_sql_exception: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'8665021690\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'8665021690\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'8665021690\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 5 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-04-10 11:27:08 --> mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact...', 0)
+#1 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact...')
+#2 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact...')
+#3 C:\xampp\htdocs\itconsultant\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact...', Array, false)
+#4 C:\xampp\htdocs\itconsultant\app\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\itconsultant\app\Controllers\Admin.php(804): App\Models\homeModel->updateContactData(Array)
+#6 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+#7 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\itconsultant\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\itconsultant\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\itconsultant\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-04-10 11:27:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+[Method: POST, Route: admin/contactupdate/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 2 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:27:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+12345678901\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+12345678901\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 4 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:27:08 --> [Caused by] mysqli_sql_exception: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+12345678901\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+12345678901\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+12345678901\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 5 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-04-10 11:28:08 --> mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact...', 0)
+#1 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact...')
+#2 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact...')
+#3 C:\xampp\htdocs\itconsultant\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact...', Array, false)
+#4 C:\xampp\htdocs\itconsultant\app\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\itconsultant\app\Controllers\Admin.php(804): App\Models\homeModel->updateContactData(Array)
+#6 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+#7 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\itconsultant\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\itconsultant\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\itconsultant\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-04-10 11:28:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+[Method: POST, Route: admin/contactupdate/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 2 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:28:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+>>>>>>> b36cfe2e1f5ec88eeab66b022b946d463b4e7ec7
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
  1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
 WHERE `contact_us_id` = 1')
@@ -3019,7 +3260,11 @@ WHERE `contact_us_id` = :contact_us_id:', [...], false)
  9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 CRITICAL - 2025-04-10 11:45:01 --> [Caused by] mysqli_sql_exception: Unknown column 'phone_number' in 'field list'
+=======
+CRITICAL - 2025-04-10 11:28:08 --> [Caused by] mysqli_sql_exception: Unknown column 'phone_number' in 'field list'
+>>>>>>> b36cfe2e1f5ec88eeab66b022b946d463b4e7ec7
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
  1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
 WHERE `contact_us_id` = 1', 0)
@@ -3037,3 +3282,130 @@ WHERE `contact_us_id` = :contact_us_id:', [...], false)
 10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
 11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
+=======
+ERROR - 2025-04-10 11:30:51 --> mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact...', 0)
+#1 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact...')
+#2 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact...')
+#3 C:\xampp\htdocs\itconsultant\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact...', Array, false)
+#4 C:\xampp\htdocs\itconsultant\app\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\itconsultant\app\Controllers\Admin.php(804): App\Models\homeModel->updateContactData(Array)
+#6 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+#7 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\itconsultant\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\itconsultant\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\itconsultant\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-04-10 11:30:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+[Method: POST, Route: admin/contactupdate/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 2 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:30:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 4 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:30:51 --> [Caused by] mysqli_sql_exception: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 5 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-04-10 11:33:16 --> mysqli_sql_exception: Unknown column 'phone_number' in 'field list' in C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\itconsultant\system\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact...', 0)
+#1 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact...')
+#2 C:\xampp\htdocs\itconsultant\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact...')
+#3 C:\xampp\htdocs\itconsultant\system\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact...', Array, false)
+#4 C:\xampp\htdocs\itconsultant\app\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\itconsultant\app\Controllers\Admin.php(804): App\Models\homeModel->updateContactData(Array)
+#6 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+#7 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\itconsultant\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\itconsultant\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\itconsultant\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\itconsultant\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-04-10 11:33:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+[Method: POST, Route: admin/contactupdate/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 2 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:33:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 4 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-10 11:33:16 --> [Caused by] mysqli_sql_exception: Unknown column 'phone_number' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `contact_us` SET `heading` = \'If You Have Any Query, Feel Free To Contact Us\', `phone_heading` = \'Call and ask\', `phone_number` = \'+02298475845845\', `email_heading` = \'Email to get free quote\', `email` = \'info001@example.com\', `address_heading` = \'Visit our office near\', `address` = \'XYS Street, NY, USA\'
+WHERE `contact_us_id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2521): CodeIgniter\Database\BaseConnection->query('UPDATE `contact_us` SET `heading` = :heading:, `phone_heading` = :phone_heading:, `phone_number` = :phone_number:, `email_heading` = :email_heading:, `email` = :email:, `address_heading` = :address_heading:, `address` = :address:
+WHERE `contact_us_id` = :contact_us_id:', [...], false)
+ 5 APPPATH\Models\homeModel.php(182): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Admin.php(804): App\Models\homeModel->updateContactData([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->updateContact('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+>>>>>>> b36cfe2e1f5ec88eeab66b022b946d463b4e7ec7
