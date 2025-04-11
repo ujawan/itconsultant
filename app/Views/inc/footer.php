@@ -10,10 +10,24 @@
         <?php endif; ?>
     </a>
     <p class="mt-3 mb-4"><?= $footer['footer_text'] ?></p>
-                        <form action="">
+                        <form action="<?= base_url('newsletter/subscribe') ?>" method="POST">
+                            <?php if (session()->getFlashdata('newsletter_success')): ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <?= session()->getFlashdata('newsletter_success') ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (session()->getFlashdata('newsletter_error')): ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <?= session()->getFlashdata('newsletter_error') ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php endif; ?>
+
                             <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
+                                <input type="email" name="email" class="form-control border-white p-3" placeholder="Your Email" required>
+                                <button type="submit" class="btn btn-dark">Sign Up</button>
                             </div>
                         </form>
                     </div>

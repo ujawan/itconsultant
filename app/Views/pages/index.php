@@ -15,7 +15,6 @@
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-white text-uppercase mb-3 animated slideInDown"><?= $record['hero_small_heading'] ?></h5>
                         <h1 class="display-1 text-white mb-md-4 animated zoomIn"><?= $record['hero_heading'] ?></h1>
-                        <a href="<?= base_url('quote') ?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
                         <a href="<?= base_url('contact') ?>" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                     </div>
                 </div>
@@ -46,7 +45,7 @@
 
   <!-- Facts Start -->
   <div class="container-fluid facts py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
+        <div class="container py-5">
             <div class="row gx-0">
                 <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
                     <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
@@ -254,7 +253,7 @@
 
 <?php foreach ($quotes as $quote) : ?>
     <!-- Quote Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid form section py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-7">
@@ -281,27 +280,40 @@
                         </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form>
+                        <form action="<?= base_url('quote/send') ?>" method="POST">
+                            <?php if (session()->getFlashdata('success')): ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <?= session()->getFlashdata('success') ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php endif; ?>
+
+                            <?php if (session()->getFlashdata('error')): ?>
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <?= session()->getFlashdata('error') ?>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php endif; ?>
+
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" name="name" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                    <select name="service" class="form-select bg-light border-0" style="height: 55px;" required>
+                                        <option value="" selected disabled>Select A Service</option>
+                                        <option value="Service 1">Service 1</option>
+                                        <option value="Service 2">Service 2</option>
+                                        <option value="Service 3">Service 3</option>
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                    <textarea name="message" class="form-control bg-light border-0" rows="3" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-dark w-100 py-3" type="submit">Request A Quote</button>
@@ -314,6 +326,7 @@
         </div>
     </div>
     <!-- Quote End -->
+<?php endforeach; ?>
 
 
     <!-- Testimonial Start -->

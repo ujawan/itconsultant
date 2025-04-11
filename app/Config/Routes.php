@@ -38,6 +38,9 @@ $routes->get('about', 'Home::about');           // About page
 $routes->get('service', 'Home::service');       // Services listing page
 $routes->get('contact', 'Home::contact');       // Contact page
 $routes->get('quote', 'Home::quote');          // Quote request page
+$routes->post('quote/send', 'Quote::send');    // Handle quote form submission
+$routes->post('contact/send', 'Contact::send'); // Handle contact form submission
+$routes->post('newsletter/subscribe', 'Newsletter::subscribe'); // Handle newsletter subscription
 $routes->get('team', 'Home::team');            // Team members page
 $routes->get('testimonial', 'Home::testimonial'); // Testimonials page
 $routes->get('feature', 'Home::feature');       // Features page
@@ -99,15 +102,3 @@ $routes->get('admin/footer', 'Admin::footer');  // Footer settings
 $routes->post('admin/footerupdate/(:num)', 'Admin::updateFooterData/$1');
 $routes->get('admin/headerlogo', 'Admin::headerLogo'); // Header logo management
 $routes->post('admin/headerlogo/(:num)', 'Admin::updateHeaderLogo/$1');
-
-
-
-
-
-
-
-
-
-
-
-

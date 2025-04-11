@@ -4,6 +4,7 @@ namespace Config;
 
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Log\Handlers\FileHandler;
+use CodeIgniter\Log\Handlers\ErrorlogHandler;
 
 class Logger extends BaseConfig
 {
@@ -38,7 +39,7 @@ class Logger extends BaseConfig
      *
      * @var int|list<int>
      */
-    public $threshold = (ENVIRONMENT === 'production') ? 4 : 9;
+    public $threshold = 9;
 
     /**
      * --------------------------------------------------------------------------
@@ -134,17 +135,16 @@ class Logger extends BaseConfig
 
         /*
          * The ErrorlogHandler writes the logs to PHP's native `error_log()` function.
-         * Uncomment this block to use it.
          */
-        // 'CodeIgniter\Log\Handlers\ErrorlogHandler' => [
-        //     /* The log levels this handler can handle. */
-        //     'handles' => ['critical', 'alert', 'emergency', 'debug', 'error', 'info', 'notice', 'warning'],
-        //
-        //     /*
-        //     * The message type where the error should go. Can be 0 or 4, or use the
-        //     * class constants: `ErrorlogHandler::TYPE_OS` (0) or `ErrorlogHandler::TYPE_SAPI` (4)
-        //     */
-        //     'messageType' => 0,
-        // ],
+        ErrorlogHandler::class => [
+            /* The log levels this handler can handle. */
+            'handles' => ['critical', 'alert', 'emergency', 'debug', 'error', 'info', 'notice', 'warning'],
+
+            /*
+            * The message type where the error should go. Can be 0 or 4, or use the
+            * class constants: `ErrorlogHandler::TYPE_OS` (0) or `ErrorlogHandler::TYPE_SAPI` (4)
+            */
+            'messageType' => 0,
+        ],
     ];
 }
