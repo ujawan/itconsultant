@@ -192,9 +192,13 @@
                 <h1 class="mb-0"><?= $record['services_heading'] ?></h1>
             </div>
             <div class="row g-5">
-                <?php foreach ($services as $service) : ?>
+                <?php foreach ($services as $key => $service): ?>
                     <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                        <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <?php if ($key == 1): ?>
+                            <div class="service-item bg-white rounded shadow d-flex flex-column align-items-center justify-content-center text-center" style="z-index: 1;">
+                        <?php else: ?>
+                            <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <?php endif; ?>
                             <div class="service-icon">
                                 <i class="fa <?= $service['service_icon'] ?? 'fa-shield-alt' ?> text-white"></i>
                             </div>
@@ -220,32 +224,39 @@
                 <h1 class="mb-0"><?= $record['pricing_heading'] ?></h1>
             </div>
             <div class="row g-0 gy-4">
-    <?php foreach ($pricings as $key => $pricing) : ?>
-        <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
-            <?php if ($key == 1): ?>
-                <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
-            <?php else: ?>
-                <div class="bg-light rounded">
-            <?php endif; ?>
-                <div class="border-bottom py-4 px-5 mb-4">
-                    <h4 class="text-primary mb-1"><?= $pricing['pricing_plan'] ?></h4>
-                    <small class="text-uppercase"><?= $pricing['pricing_text'] ?></small>
-                </div>
-                <div class="p-5 pt-0">
-                    <h1 class="display-5 mb-3">
-                        <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small><?= $pricing['price'] ?>.00<small
-                            class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
-                    </h1>
-                    <div class="d-flex justify-content-between mb-3"><span><?= $pricing['pricing_check1'] ?></span><i class="fa fa-check text-primary pt-1"></i></div>
-                    <div class="d-flex justify-content-between mb-3"><span><?= $pricing['pricing_check2'] ?></span><i class="fa fa-check text-primary pt-1"></i></div>
-                    <div class="d-flex justify-content-between mb-3"><span><?= $pricing['pricing_check3'] ?></span><i class="fa fa-check text-primary pt-1"></i></div>
-                    <div class="d-flex justify-content-between mb-2"><span><?= $pricing['pricing_check4'] ?></span><i class="fa fa-times text-danger pt-1"></i></div>
-                    <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
-                </div>
+                <?php 
+                $totalPricings = count($pricings);
+                foreach ($pricings as $key => $pricing): 
+                    // Calculate current row and position
+                    $currentRow = floor($key / 3);
+                    $positionInRow = $key % 3;
+                    $isMiddleCard = ($positionInRow == 1);
+                ?>
+                    <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
+                        <?php if ($isMiddleCard): ?>
+                            <div class="bg-white rounded shadow position-relative" style="z-index: 1;">
+                        <?php else: ?>
+                            <div class="bg-light rounded">
+                        <?php endif; ?>
+                            <div class="border-bottom py-4 px-5 mb-4">
+                                <h4 class="text-primary mb-1"><?= $pricing['pricing_plan'] ?></h4>
+                                <small class="text-uppercase"><?= $pricing['pricing_text'] ?></small>
+                            </div>
+                            <div class="p-5 pt-0">
+                                <h1 class="display-5 mb-3">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small><?= $pricing['price'] ?>.00<small
+                                        class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
+                                </h1>
+                                <div class="d-flex justify-content-between mb-3"><span><?= $pricing['pricing_check1'] ?></span><i class="fa fa-check text-primary pt-1"></i></div>
+                                <div class="d-flex justify-content-between mb-3"><span><?= $pricing['pricing_check2'] ?></span><i class="fa fa-check text-primary pt-1"></i></div>
+                                <div class="d-flex justify-content-between mb-3"><span><?= $pricing['pricing_check3'] ?></span><i class="fa fa-check text-primary pt-1"></i></div>
+                                <div class="d-flex justify-content-between mb-2"><span><?= $pricing['pricing_check4'] ?></span><i class="fa fa-times text-danger pt-1"></i></div>
+                                <a href="" class="btn btn-primary py-2 px-4 mt-4">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
             </div>
-        </div>
-    <?php endforeach; ?>
-</div>
         </div>
     </div>
     <!-- Pricing Plan End -->
