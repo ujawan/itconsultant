@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet"> 
     
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -36,6 +36,31 @@
 <link rel="manifest" href="<?= base_url('assets/img/favicon_io//site.webmanifest')?>">
     
     <?= $this->renderSection('styles') ?>
+    <style>
+        .service-item {
+            transition: .5s;
+            margin: 0;
+        }
+
+        .service-item.shadow {
+            transform: scale(1.1);
+            margin: -10px;
+            z-index: 1;
+            background: #FFFFFF !important;
+        }
+
+        .service-item.shadow .service-icon {
+            background: var(--primary) !important;
+        }
+
+        .service-item.shadow:hover {
+            transform: scale(1.2);
+        }
+
+        .service-item:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 
 <body>
