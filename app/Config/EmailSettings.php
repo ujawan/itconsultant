@@ -17,10 +17,10 @@ class EmailSettings extends BaseConfig
     /**
      * Email Credentials
      */
-    public $fromEmail = 'ujawan42@gmail.com';
+    public $fromEmail = '';
     public $fromName = 'IT Consultant';
-    public $username = 'ujawan42@gmail.com';
-    public $password = 'nqau xsee dyzf ypqo';
+    public $username = '';
+    public $password = '';
 
     /**
      * Debug Settings
