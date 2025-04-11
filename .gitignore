@@ -16,6 +16,7 @@
 # !application/logs/index.html
 # !application/logs/.htaccess
 # /vendor/
-/writable/*
+writable/session/*
+writable/logs/*
 # .env
 # .htaccess

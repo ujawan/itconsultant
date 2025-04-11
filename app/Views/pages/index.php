@@ -25,7 +25,6 @@
                     <div class="p-3" style="max-width: 900px;">
                         <h5 class="text-white text-uppercase mb-3 animated slideInDown"><?= $record['hero_small_heading'] ?></h5>
                         <h1 class="display-1 text-white mb-md-4 animated zoomIn"><?= $record['hero_heading'] ?></h1>
-                        <a href="<?= base_url('quote') ?>" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Free Quote</a>
                         <a href="<?= base_url('contact') ?>" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Contact Us</a>
                     </div>
                 </div>
@@ -220,7 +219,7 @@
                 <h5 class="fw-bold text-primary text-uppercase">Pricing Plans</h5>
                 <h1 class="mb-0"><?= $record['pricing_heading'] ?></h1>
             </div>
-            <div class="row g-0">
+            <div class="row g-0 gy-4">
     <?php foreach ($pricings as $key => $pricing) : ?>
         <div class="col-lg-4 wow slideInUp" data-wow-delay="0.6s">
             <?php if ($key == 1): ?>
