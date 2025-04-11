@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2025 at 11:40 AM
+-- Generation Time: Apr 11, 2025 at 06:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -47,22 +47,6 @@ CREATE TABLE `about` (
 
 INSERT INTO `about` (`about_id`, `about_img`, `about_heading`, `about_text`, `about_check1`, `about_check2`, `about_check3`, `about_check4`, `about_phone_text`, `about_phone`, `timestamp`) VALUES
 (1, 'about.jpg', 'The Best IT Solution With 12 Years Experiance', 'Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna dolore erat amet', 'Award Winning', '24/7 Support', 'Professional Staff', 'Fair Prices', 'Call to ask any question', 1234567889, '2025-04-07 15:43:25');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `blogs`
---
-
-CREATE TABLE `blogs` (
-  `blog_id` int(100) NOT NULL,
-  `blog_img` varchar(255) NOT NULL,
-  `blog_category` varchar(255) NOT NULL,
-  `blog_auther` varchar(255) NOT NULL,
-  `blog_date` date NOT NULL DEFAULT current_timestamp(),
-  `card_heading` varchar(255) NOT NULL,
-  `card_text` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
 
@@ -397,12 +381,6 @@ ALTER TABLE `about`
   ADD PRIMARY KEY (`about_id`);
 
 --
--- Indexes for table `blogs`
---
-ALTER TABLE `blogs`
-  ADD PRIMARY KEY (`blog_id`);
-
---
 -- Indexes for table `brand_logo`
 --
 ALTER TABLE `brand_logo`
@@ -489,12 +467,6 @@ ALTER TABLE `testimonial`
 --
 ALTER TABLE `about`
   MODIFY `about_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `blogs`
---
-ALTER TABLE `blogs`
-  MODIFY `blog_id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `brand_logo`
