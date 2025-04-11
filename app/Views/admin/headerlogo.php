@@ -1,6 +1,18 @@
 <?= $this->extend('layout/admin') ?>
 <?= $this->section('content') ?>
 
+<?php 
+$message = session()->getFlashdata('success') ?? session()->getFlashdata('error');
+$messageType = session()->getFlashdata('success') ? 'success' : (session()->getFlashdata('error') ? 'danger' : '');
+?>
+
+<?php if ($message): ?>
+    <div class="alert alert-<?= $messageType ?> alert-dismissible fade show" role="alert">
+        <?= $message ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
 <div class="container-fluid">
     <div class="card shadow mb-4">
         <div class="card-header py-3">

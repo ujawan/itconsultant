@@ -14,18 +14,14 @@ $routes->group('admin', static function($routes) {
     $routes->get('logout', 'Admin::logout');
     
     // Dashboard
-    $routes->get('dashboard', 'Admin::dashboard');
-    $routes->get('/', 'Admin::dashboard');
+    $routes->get('/', 'Admin::headeraddress');
     
     // Services Management
     $routes->get('services', 'Admin::services');
     $routes->get('services/new', 'Admin::newService');
     $routes->post('services/create', 'Admin::createService');
     
-    // Blog Management
-    $routes->get('blog', 'Admin::blog');
-    $routes->get('blog/new', 'Admin::newPost');
-    $routes->post('blog/create', 'Admin::createPost');
+   
     
     // Testimonials Management
     

@@ -33,14 +33,14 @@ class Admin extends BaseController
         if (!$this->session->get('isAdminLoggedIn')) {
             return redirect()->to(base_url('admin/login'));
         }
-        return view('admin/dashboard');
+        return view('admin/headeraddress');
     }
 
     public function login(): string|RedirectResponse
     {
         // If already logged in, redirect to dashboard
         if (session()->get('isAdminLoggedIn')) {
-            return redirect()->to('admin/dashboard');
+            return redirect()->to('admin/headeraddress');
         }
 
         if ($this->request->getMethod() === 'POST') {
@@ -55,7 +55,7 @@ class Admin extends BaseController
                     'adminUsername' => $username
                 ]);
 
-                return redirect()->to('admin/dashboard');
+                return redirect()->to('admin/headeraddress');
             }
 
             session()->setFlashdata('error', 'Invalid username or password');
@@ -72,56 +72,12 @@ class Admin extends BaseController
     public function logout(): RedirectResponse
     {
         session()->destroy();
-        return redirect()->to('admin/login')->with('message', 'Successfully logged out');
-    }
-
-    // Services Management
-    
-
-    public function newService(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/services/new');
-    }
-
-    // Blog Management
-    public function blog(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/blog/index');
-    }
-
-    public function newPost(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/blog/new');
+        return redirect()
+            ->to('admin/login')
+            ->with('success', 'Successfully logged out');
     }
 
   
-
-    public function newTestimonial(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/testimonials/new');
-    }
-
-    // Settings
-    public function settings(): string|RedirectResponse
-    {
-        if (!$this->checkLogin()) {
-            return redirect()->to('admin/login');
-        }
-        return view('admin/settings');
-    }
-
     public function home(): string|RedirectResponse
     {
         if (!$this->checkLogin()) {
@@ -133,9 +89,10 @@ class Admin extends BaseController
 
     public function updateHome($id)
 
-    {
+    { 
         
-        $record = $homeModel->find($id);
+        $record = $this->homeModel->find($id);
+        
      
         $newName1 = $record['bkimg_1']; // Default to old image
         $file1 = $this->request->getFile('background1');
@@ -180,9 +137,12 @@ class Admin extends BaseController
             
             
         ];
+        
 
-        $homeModel->updateHome($id, $data);
-        return redirect()->to('/admin');
+        $this->homeModel->updateHome($id, $data);
+        return redirect()
+            ->to('/admin/home')
+            ->with('success', 'Home section updated successfully');
     }
     public function about(): string|RedirectResponse
     {
@@ -232,8 +192,10 @@ class Admin extends BaseController
 
 
     // Update the record
-    $homeModel->updateAbout($id, $data);
-    return redirect()->to('/admin');
+    $this->homeModel->updateAbout($id, $data);
+    return redirect()
+        ->to('/admin/about')
+        ->with('success', 'About section updated successfully');
 }
 
 public function whychooseus(): string|RedirectResponse
@@ -286,7 +248,9 @@ public function updateWhyChooseUs($id)
 
     // Update the record in features table
     $db->table('features')->where('feature_id', $id)->update($data);
-    return redirect()->to('/admin');
+    return redirect()
+        ->to('/admin/whychooseus')
+        ->with('success', 'Why Choose Us section updated successfully');
 }
 
 public function ourServices(): string|RedirectResponse
@@ -317,7 +281,9 @@ public function addService()
     ];
     
     $this->homeModel->addService($data);
-    return redirect()->to('admin/ourservices');
+    return redirect()
+        ->to('admin/ourservices')
+        ->with('success', 'Service added successfully');
 }
 
 public function updateService($id)
@@ -329,14 +295,19 @@ public function updateService($id)
     ];
     
     $this->homeModel->updateService($id, $data);
-    return redirect()->to('admin/ourservices');
+    return redirect()
+        ->to('admin/ourservices')
+        ->with('success', 'Service updated successfully');
 }
 
 public function deleteService($id)
 {
     $this->homeModel->deleteService($id);
-    return redirect()->to('admin/ourservices');
+    return redirect()
+        ->to('admin/ourservices')
+        ->with('warning', 'Service deleted successfully');
 }
+
 public function quote()
 {
     if (!$this->checkLogin()) {
@@ -361,7 +332,9 @@ public function updateQuote($id)
     ];
 
     $this->homeModel->updateQuote($id, $data);
-    return redirect()->to('/admin');
+    return redirect()
+        ->to('admin/quote')
+        ->with('success', 'Quote section updated successfully');
 }
 
 public function pricing(): string|RedirectResponse
@@ -387,7 +360,9 @@ public function addPricing()
     ];
     
     $this->homeModel->addPricing($data);
-    return redirect()->to('admin/pricing');
+    return redirect()
+        ->to('admin/pricing')
+        ->with('success', 'Pricing plan added successfully');
 }
 
 public function updatePricing($id)
@@ -403,13 +378,17 @@ public function updatePricing($id)
     ];
     
     $this->homeModel->updatePricing($id, $data);
-    return redirect()->to('admin/pricing');
+    return redirect()
+        ->to('admin/pricing')
+        ->with('success', 'Pricing plan updated successfully');
 }
 
 public function deletePricing($id)
 {
     $this->homeModel->deletePricing($id);
-    return redirect()->to('admin/pricing');
+    return redirect()
+        ->to('admin/pricing')
+        ->with('warning', 'Pricing plan deleted successfully');
 }
 
 public function Testimonials(): string|RedirectResponse
@@ -437,7 +416,9 @@ public function addTestimonial()
     ];
     
     $this->homeModel->addTestimonial($data);
-    return redirect()->to('admin/testimonials');
+    return redirect()
+        ->to('admin/testimonials')
+        ->with('success', 'Testimonial added successfully');
 }
 
 public function updateTestimonial($id)
@@ -458,13 +439,17 @@ public function updateTestimonial($id)
     }
     
     $this->homeModel->updateTestimonial($id, $data);
-    return redirect()->to('admin/testimonials');
+    return redirect()
+        ->to('admin/testimonials')
+        ->with('success', 'Testimonial updated successfully');
 }
 
 public function deleteTestimonial($id)
 {
     $this->homeModel->deleteTestimonial($id);
-    return redirect()->to('admin/testimonials');
+    return redirect()
+        ->to('admin/testimonials')
+        ->with('warning', 'Testimonial deleted successfully');
 }
 
 
@@ -494,7 +479,9 @@ public function addTeam()
     ];
     
     $this->homeModel->addTeam($data);
-    return redirect()->to('admin/team');
+    return redirect()
+        ->to('admin/team')
+        ->with('success', 'Team member added successfully');
 }
 
 public function updateTeam($id)
@@ -525,7 +512,9 @@ public function updateTeam($id)
     }
     
     $this->homeModel->updateTeam($id, $data);
-    return redirect()->to('admin/team');
+    return redirect()
+        ->to('admin/team')
+        ->with('success', 'Team member updated successfully');
 }
 
 public function deleteTeam($id)
@@ -538,7 +527,9 @@ public function deleteTeam($id)
     }
     
     $this->homeModel->deleteTeam($id);
-    return redirect()->to('admin/team');
+    return redirect()
+        ->to('admin/team')
+        ->with('warning', 'Team member deleted successfully');
 }
 
 
@@ -564,7 +555,9 @@ public function addBrand()
         $this->homeModel->addBrand($data);
     }
     
-    return redirect()->to('admin/brand');
+    return redirect()
+        ->to('admin/brand')
+        ->with('success', 'Brand logo added successfully');
 }
 
 public function updateBrand($id)
@@ -587,7 +580,9 @@ public function updateBrand($id)
         }
     }
     
-    return redirect()->to('admin/brand');
+    return redirect()
+        ->to('admin/brand')
+        ->with('success', 'Brand logo updated successfully');
 }
 
 public function deleteBrand($id)
@@ -600,7 +595,9 @@ public function deleteBrand($id)
     }
     
     $this->homeModel->deleteBrand($id);
-    return redirect()->to('admin/brand');
+    return redirect()
+        ->to('admin/brand')
+        ->with('warning', 'Brand logo deleted successfully');
 }
 
 
@@ -622,7 +619,9 @@ public function addMenu()
     ];
     
     $this->homeModel->addMenu($data);
-    return redirect()->to('admin/menu');
+    return redirect()
+        ->to('admin/menu')
+        ->with('success', 'Menu item added successfully');
 }
 
 public function updateMenu($id)
@@ -634,13 +633,17 @@ public function updateMenu($id)
     ];
     
     $this->homeModel->updateMenu($id, $data);
-    return redirect()->to('admin/menu');
+    return redirect()
+        ->to('admin/menu')
+        ->with('success', 'Menu item updated successfully');
 }
 
 public function deleteMenu($id)
 {
     $this->homeModel->deleteMenu($id);
-    return redirect()->to('admin/menu');
+    return redirect()
+        ->to('admin/menu')
+        ->with('warning', 'Menu item deleted successfully');
 }
 
 public function headerAddress(): string|RedirectResponse
@@ -671,7 +674,9 @@ public function updateHeaderAddress()
     ];
 
     $this->homeModel->updateHeaderAddress($data);
-    return redirect()->to('admin')->with('success', 'Header Address updated successfully');
+    return redirect()
+        ->to('admin/headeraddress')
+        ->with('success', 'Header Address updated successfully');
 }
 
 public function contact(): string|RedirectResponse
@@ -696,7 +701,9 @@ public function updateContact($id)
     ];
 
     $this->homeModel->updateContactData($data);
-    return redirect()->to('admin')->with('success', 'Contact Information updated successfully');
+    return redirect()
+        ->to('admin/contact')
+        ->with('success', 'Contact information updated successfully');
 }
 
 public function footer()
@@ -733,7 +740,9 @@ public function updateFooterData($id)
     }
 
     $this->homeModel->updateFooterData($data);
-    return redirect()->to('admin')->with('success', 'Footer updated successfully');
+    return redirect()
+        ->to('admin/footer')
+        ->with('success', 'Footer updated successfully');
 }
 
 public function headerLogo()
@@ -746,56 +755,33 @@ public function headerLogo()
 }
 
 
-public function updateHeaderLogo($id)
+public function updateHeaderLogo()
 {
-    if (!$this->checkLogin()) {
-        return redirect()->to('admin/login');
+    $file = $this->request->getFile('logo_image');
+        
+    // If no file was uploaded
+    if (!$file->isValid()) {
+        return redirect()
+            ->to('admin/headerlogo')
+            ->with('error', 'Please select a file to upload');
     }
 
-    $data = [];
-    $logo = $this->request->getFile('logo_image');
-    
-    if ($logo && $logo->isValid() && !$logo->hasMoved()) {
-        $newName = $logo->getRandomName();
-        
-        // Create directory if it doesn't exist
-        if (!is_dir('assets/img')) {
-            mkdir('assets/img', 0777, true);
-        }
-        
-        // Move file
-        if ($logo->move('assets/img', $newName)) {
-            $data['logo_image'] = $newName;
+    try {
+        $newName = $file->getRandomName();
+        $file->move('assets/img', $newName);
             
-            // Delete old logo
-            $oldLogo = $this->homeModel->getHeaderLogo()['logo_image'] ?? '';
-            if ($oldLogo && file_exists(FCPATH . 'assets/img/' . $oldLogo)) {
-                unlink(FCPATH . 'assets/img/' . $oldLogo);
-            }
-        }
-    }
-    
-    if (!empty($data)) {
+        $data['logo_image'] = $newName;
         $this->homeModel->updateHeaderLogo(1, $data);
-        return redirect()->to('admin')->with('success', 'Header Logo updated successfully');
+            
+        return redirect()
+            ->to('admin/headerlogo')
+            ->with('success', 'Header Logo updated successfully');
+                
+    } catch (\Exception $e) {
+        return redirect()
+            ->to('admin/headerlogo')
+            ->with('error', 'Error uploading file. Please try again.');
     }
-    
-    return redirect()->to('admin')->with('error', 'No file was uploaded or an error occurred');
-}
-public function dashboard()
-{
-    if (!$this->checkLogin()) {
-        return redirect()->to('admin/login');
-    }
-    $data = [
-        'servicesCount' => $this->homeModel->countServices(),
-        'teamCount' => $this->homeModel->countTeamMembers(),
-        'testimonialsCount' => $this->homeModel->countTestimonials(),
-        'brandsCount' => $this->homeModel->countBrands()
-    ];
-
-    return view('admin/dashboard', $data);
 }
 
 }
-

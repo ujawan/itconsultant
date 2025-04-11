@@ -1,6 +1,13 @@
 <?= $this->extend('layout/admin') ?>
 <?= $this->section('content') ?>
 
+<?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?= session()->getFlashdata('success') ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
 <div class="container-fluid">
     <h1 class="h3 mb-4 text-gray-800">Manage Quote Section</h1>
 

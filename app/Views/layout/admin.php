@@ -48,17 +48,21 @@ $uri = service('uri');
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?= site_url('admin/dashboard') ?>">IT Consulting Admin</a>
+            <a class="navbar-brand" href="<?= site_url('admin/headeraddress') ?>">IT Consulting Admin</a>
             <div class="d-flex">
                 <div class="dropdown">
                     <button class="btn btn-primary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
                         <i class="fas fa-user"></i> <?= session()->get('adminUsername') ?>
                     </button>
+                    
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="<?= site_url('admin/logout') ?>">
                             <i class="fas fa-sign-out-alt"></i> Logout
                         </a></li>
                     </ul>
+                    <a class="btn btn-primary" href="<?= site_url('') ?>" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Website
+                    </a>
                 </div>
             </div>
         </div>
@@ -71,15 +75,9 @@ $uri = service('uri');
                 <div class="position-sticky pt-3">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link <?= ($uri->getSegment(2) === 'dashboard' ? 'active' : '') ?>" 
-                               href="<?= site_url('admin/dashboard') ?>">
-                                <i class="fas fa-tachometer-alt"></i> Dashboard
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link <?= ($uri->getSegment(2) === 'headeraddress' ? 'active' : '') ?>" 
                                href="<?= site_url('admin/headeraddress') ?>">
-                                <i class="fas fa-list"></i> Header 
+                                <i class="fas fa-tachometer-alt"></i> Header Address
                             </a>
                         </li>
                         <li class="nav-item">
@@ -163,18 +161,6 @@ $uri = service('uri');
 
             <!-- Main content -->
             <div class="col-md-9 col-lg-10 main-content">
-                <?php if(session()->getFlashdata('message')): ?>
-                    <div class="alert alert-success">
-                        <?= session()->getFlashdata('message') ?>
-                    </div>
-                <?php endif; ?>
-                
-                <?php if(session()->getFlashdata('error')): ?>
-                    <div class="alert alert-danger">
-                        <?= session()->getFlashdata('error') ?>
-                    </div>
-                <?php endif; ?>
-
                 <?= $this->renderSection('content') ?>
             </div>
         </div>

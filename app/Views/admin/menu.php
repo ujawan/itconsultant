@@ -1,6 +1,20 @@
 <?= $this->extend('layout/admin') ?>
 <?= $this->section('content') ?>
 
+<?php if (session()->getFlashdata('success')): ?>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?= session()->getFlashdata('success') ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
+<?php if (session()->getFlashdata('warning')): ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?= session()->getFlashdata('warning') ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
+
 <div class="container-fluid px-4">
     <h1 class="mt-4">Menu Management</h1>
     <div class="card mb-4">
