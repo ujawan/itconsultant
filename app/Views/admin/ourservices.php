@@ -24,6 +24,7 @@
                     <tr>
                         <td><?= $service['service_id'] ?></td>
                         <td><?= $service['service_name'] ?></td>
+                        <td><?= $service['service_icon'] ?></td>
                         <td><?= substr($service['service_text'], 0, 100) ?>...</td>
                         <td>
                             <button class="btn btn-sm btn-primary" data-bs-toggle="modal" 
@@ -61,6 +62,23 @@
                         <label>Service Detail</label>
                         <textarea name="serviceDetail" class="form-control" rows="4" required></textarea>
                     </div>
+                    <!-- Add this where your service form is -->
+                    <div class="mb-3">
+                        <label for="service_icon" class="form-label">Service Icon</label>
+                        <select class="form-select" name="service_icon" id="service_icon">
+                            <option value="fa-shield-alt" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-shield-alt' ? 'selected' : '' ?>>Shield</option>
+                            <option value="fa-server" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-server' ? 'selected' : '' ?>>Server</option>
+                            <option value="fa-laptop" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-laptop' ? 'selected' : '' ?>>Laptop</option>
+                            <option value="fa-code" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-code' ? 'selected' : '' ?>>Code</option>
+                            <option value="fa-database" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-database' ? 'selected' : '' ?>>Database</option>
+                            <option value="fa-cloud" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-cloud' ? 'selected' : '' ?>>Cloud</option>
+                            <option value="fa-network-wired" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-network-wired' ? 'selected' : '' ?>>Network</option>
+                            <option value="fa-mobile-alt" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-mobile-alt' ? 'selected' : '' ?>>Mobile</option>
+                            <option value="fa-cogs" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-cogs' ? 'selected' : '' ?>>Cogs</option>
+                            <option value="fa-tools" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-tools' ? 'selected' : '' ?>>Tools</option>
+                        </select>
+     <div class="form-text">Preview: <i class="fa fa-shield-alt"></i></div>
+   </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -91,6 +109,23 @@
                         <label>Service Detail</label>
                         <textarea name="serviceDetail" class="form-control" rows="4" required><?= $service['service_text'] ?></textarea>
                     </div>
+                    <!-- Add this where your service form is -->
+                    <div class="mb-3">
+                        <label for="service_icon" class="form-label">Service Icon</label>
+                        <select class="form-select" name="service_icon" id="service_icon">
+                            <option value="fa-shield-alt" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-shield-alt' ? 'selected' : '' ?>>Shield</option>
+                            <option value="fa-server" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-server' ? 'selected' : '' ?>>Server</option>
+                            <option value="fa-laptop" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-laptop' ? 'selected' : '' ?>>Laptop</option>
+                            <option value="fa-code" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-code' ? 'selected' : '' ?>>Code</option>
+                            <option value="fa-database" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-database' ? 'selected' : '' ?>>Database</option>
+                            <option value="fa-cloud" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-cloud' ? 'selected' : '' ?>>Cloud</option>
+                            <option value="fa-network-wired" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-network-wired' ? 'selected' : '' ?>>Network</option>
+                            <option value="fa-mobile-alt" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-mobile-alt' ? 'selected' : '' ?>>Mobile</option>
+                            <option value="fa-cogs" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-cogs' ? 'selected' : '' ?>>Cogs</option>
+                            <option value="fa-tools" <?= isset($service['service_icon']) && $service['service_icon'] == 'fa-tools' ? 'selected' : '' ?>>Tools</option>
+                        </select>
+                        <div class="form-text">Preview: <i class="fa <?= $service['service_icon'] ?? 'fa-shield-alt' ?>"></i></div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -108,6 +143,14 @@ function deleteService(id) {
         window.location.href = '<?= site_url('admin/services/delete/') ?>' + id;
     }
 }
+</script>
+
+<!-- Add this JavaScript at the bottom of the file -->
+<script>
+document.getElementById('service_icon').addEventListener('change', function() {
+    const preview = this.parentElement.querySelector('.form-text');
+    preview.innerHTML = `Preview: <i class="fa ${this.value}"></i>`;
+});
 </script>
 
 <?= $this->endSection() ?>
